@@ -1,0 +1,44 @@
+@model ContactManager.Models.Contact
+
+@{
+    ViewData["Title"] = "Contact Details";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <h2>Contact Details</h2>
+        
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                <h4>@Model.FullName</h4>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-3">First Name:</dt>
+                    <dd class="col-sm-9">@Model.FirstName</dd>
+
+                    <dt class="col-sm-3">Last Name:</dt>
+                    <dd class="col-sm-9">@Model.LastName</dd>
+
+                    <dt class="col-sm-3">Email:</dt>
+                    <dd class="col-sm-9">
+                        <a href="mailto:@Model.Email">@Model.Email</a>
+                    </dd>
+
+                    <dt class="col-sm-3">Phone:</dt>
+                    <dd class="col-sm-9">
+                        <a href="tel:@Model.Phone">@Model.Phone</a>
+                    </dd>
+
+                    <dt class="col-sm-3">Organization:</dt>
+                    <dd class="col-sm-9">@(Model.Organization ?? "N/A")</dd>
+                </dl>
+            </div>
+            <div class="card-footer">
+                <a asp-action="Edit" asp-route-id="@Model.ContactId" class="btn btn-warning">Edit</a>
+                <a asp-action="Delete" asp-route-id="@Model.ContactId" class="btn btn-danger">Delete</a>
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>

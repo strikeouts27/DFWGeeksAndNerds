@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ContactManager.Models.Contact>
+
+@{
+    ViewData["Title"] = "Contact Manager - Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Contact Manager</h1>
+    <p class="lead">Manage your contacts efficiently and effectively.</p>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Quick Stats</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Total Contacts: <strong>@ViewBag.ContactCount</strong></p>
+                <a asp-controller="Contact" asp-action="Index" class="btn btn-primary">View All Contacts</a>
+                <a asp-controller="Contact" asp-action="Add" class="btn btn-success">Add New Contact</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (Model != null && Model.Any())
+{
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h3>Recent Contacts</h3>
+            <div class="list-group">
+                @foreach (var contact in Model.Take(5))
+                {
+                    <a asp-controller="Contact" asp-action="Details" asp-route-id="@contact.ContactId" 
+                       class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">@contact.FullName</h5>
+                            <small>@contact.Organization</small>
+                        </div>
+                        <p class="mb-1">@contact.Email</p>
+                        <small>@contact.Phone</small>
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+}
+
