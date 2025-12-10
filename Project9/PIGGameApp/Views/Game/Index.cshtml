@@ -1,0 +1,113 @@
+@model PIGGameApp.Models.GameState
+
+@{
+    ViewData["Title"] = "PIG Game";
+}
+
+<div class="game-container">
+    <h1 class="game-title">🎲 PIG Dice Game 🎲</h1>
+    
+    <div class="game-info">
+        <p class="rules">First player to reach @Model.PointsToWin points wins!</p>
+    </div>
+
+    <!-- Game Board -->
+    <div class="game-board">
+        <!-- Player 1 Section -->
+        <div class="player-section @(Model.CurrentPlayer == 1 && !Model.GameOver ? "active-player" : "")">
+            <h2>Player 1</h2>
+            <div class="score-display">
+                <div class="score-label">Score:</div>
+                <div class="score-value">@Model.Player1Score</div>
+            </div>
+            @if (Model.GameOver && Model.Winner == 1)
+            {
+                <div class="winner-badge">🏆 Winner! 🏆</div>
+            }
+        </div>
+
+        <!-- Center Section - Die and Turn Info -->
+        <div class="center-section">
+            <div class="die-container">
+                @if (Model.DieValue > 0)
+                {
+                    <div class="die die-@Model.DieValue">
+                        <span class="die-number">@Model.DieValue</span>
+                    </div>
+                }
+                else
+                {
+                    <div class="die die-empty">
+                        <span class="die-number">-</span>
+                    </div>
+                }
+            </div>
+
+            <div class="turn-info">
+                <h3>Turn Total</h3>
+                <div class="turn-total">@Model.TurnTotal</div>
+            </div>
+
+            @if (!Model.GameOver)
+            {
+                <div class="current-turn">
+                    <p>Current Turn: <strong>Player @Model.CurrentPlayer</strong></p>
+                </div>
+            }
+        </div>
+
+        <!-- Player 2 Section -->
+        <div class="player-section @(Model.CurrentPlayer == 2 && !Model.GameOver ? "active-player" : "")">
+            <h2>Player 2</h2>
+            <div class="score-display">
+                <div class="score-label">Score:</div>
+                <div class="score-value">@Model.Player2Score</div>
+            </div>
+            @if (Model.GameOver && Model.Winner == 2)
+            {
+                <div class="winner-badge">🏆 Winner! 🏆</div>
+            }
+        </div>
+    </div>
+
+    <!-- Game Over Message -->
+    @if (Model.GameOver)
+    {
+        <div class="game-over-message">
+            <h2>🎉 Game Over! 🎉</h2>
+            <p>Player @Model.Winner wins with @(Model.Winner == 1 ? Model.Player1Score : Model.Player2Score) points!</p>
+        </div>
+    }
+
+    <!-- Control Buttons -->
+    <div class="controls">
+        <form method="post" asp-action="Roll" class="control-form">
+            <button type="submit" class="btn btn-roll" disabled="@Model.GameOver">
+                🎲 Roll
+            </button>
+        </form>
+
+        <form method="post" asp-action="Hold" class="control-form">
+            <button type="submit" class="btn btn-hold" disabled="@Model.GameOver">
+                ✋ Hold
+            </button>
+        </form>
+
+        <form method="post" asp-action="NewGame" class="control-form">
+            <button type="submit" class="btn btn-new-game">
+                🔄 New Game
+            </button>
+        </form>
+    </div>
+
+    <!-- Game Rules -->
+    <div class="rules-section">
+        <h3>How to Play:</h3>
+        <ul>
+            <li><strong>Roll:</strong> Roll the die to add to your turn total</li>
+            <li><strong>Hold:</strong> Add your turn total to your score and end your turn</li>
+            <li><strong>Rolling a 1:</strong> Lose all points for this turn and end your turn</li>
+            <li><strong>Winning:</strong> First player to reach @Model.PointsToWin points wins!</li>
+        </ul>
+    </div>
+</div>
