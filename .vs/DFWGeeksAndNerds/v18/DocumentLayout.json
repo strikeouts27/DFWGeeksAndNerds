@@ -3,28 +3,60 @@
   "WorkspaceRootPath": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\controllers\\podcastscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\controllers\\podcastscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\controllers\\animecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\controllers\\animecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\news\\news.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\news\\news.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\anime\\anime.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\anime\\anime.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\podcasts\\podcasts.cshtml||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\podcasts\\podcasts.cshtml||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\music\\music.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\music\\music.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\controllers\\musiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\controllers\\musiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\events\\events.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\events\\events.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\anime\\anime.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\anime\\anime.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\controllers\\animecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\controllers\\animecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\dfwgeeksandnerds.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\dfwgeeksandnerds.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,16 +66,120 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DFWGeeksAndNerds",
+              "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj",
+              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj",
+              "RelativeToolTip": "DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj",
+              "ViewState": "AgIAAAcAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-07T02:06:05.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Podcasts.cshtml",
+              "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Podcasts\\Podcasts.cshtml",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Podcasts\\Podcasts.cshtml",
+              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Podcasts\\Podcasts.cshtml",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Podcasts\\Podcasts.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-07T01:55:22.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MusicController.cs",
+              "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Controllers\\MusicController.cs",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Controllers\\MusicController.cs",
+              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Controllers\\MusicController.cs",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Controllers\\MusicController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T01:41:55.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Music.cshtml",
+              "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Music\\Music.cshtml",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Music\\Music.cshtml",
+              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Music\\Music.cshtml",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Music\\Music.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-07T01:41:19.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PodcastsController.cs",
+              "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Controllers\\PodcastsController.cs",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Controllers\\PodcastsController.cs",
+              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Controllers\\PodcastsController.cs",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Controllers\\PodcastsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T01:30:12.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "News.cshtml",
+              "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\News\\News.cshtml",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\News\\News.cshtml",
+              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\News\\News.cshtml",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\News\\News.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-07T01:22:14.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NewsController.cs",
+              "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Controllers\\NewsController.cs",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Controllers\\NewsController.cs",
+              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Controllers\\NewsController.cs",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Controllers\\NewsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T01:21:03.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": ".gitignore",
+              "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAsAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-03-07T01:13:14.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Home\\Index.cshtml",
-              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Home\\Index.cshtml*",
-              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Home\\Index.cshtml*",
+              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-03-07T00:12:09.851Z",
@@ -51,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "site.css",
               "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "DFWGeeksAndNerds\\wwwroot\\css\\site.css",
@@ -64,20 +200,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Events.cshtml",
               "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Events\\Events.cshtml",
               "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Events\\Events.cshtml",
               "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Events\\Events.cshtml",
               "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Events\\Events.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-03-07T00:10:18.412Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "AnimeController.cs",
               "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Controllers\\AnimeController.cs",
               "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Controllers\\AnimeController.cs",
@@ -90,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Anime.cshtml",
               "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Anime\\Anime.cshtml",
               "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Anime\\Anime.cshtml",
@@ -109,7 +245,7 @@
               "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAwCIAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-03-06T23:46:04.833Z",
               "EditorCaption": ""

@@ -3,9 +3,9 @@ using DFWGeeksAndNerds.Models;
 
 namespace DFWGeeksAndNerds.Controllers
 {
-    public class RoomatesController : Controller
+    public class PodcastsController : Controller
     {
-        public IActionResult Roomates()
+        public IActionResult Podcasts()
         {
             return View();
         }

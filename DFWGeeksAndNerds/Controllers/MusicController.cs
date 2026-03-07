@@ -3,9 +3,9 @@ using DFWGeeksAndNerds.Models;
 
 namespace DFWGeeksAndNerds.Controllers
 {
-    public class RegisterController : Controller
+    public class MusicController : Controller
     {
-        public IActionResult Register()
+        public IActionResult Music()
         {
             return View();
         }
