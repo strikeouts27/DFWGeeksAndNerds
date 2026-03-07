@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/DFWGeeksAndNerds.styles.css" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/cee17c54f7.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DFWGeeksAndNerds</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -22,24 +23,26 @@
                     <ul class="navbar-nav flex-grow-1">
                         
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Anime" asp-action="Anime">Anime</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Anime">Anime</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Events" asp-action="Events">Events</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="VideoGames">Video Games</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Events">Events</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Register" asp-action="Register">Register</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Register">Register</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="VideoGames" asp-action="VideoGames">VideoGames</a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Roomates" asp-action="Roomates">Roomates</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -51,11 +54,38 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - DFWGeeksAndNerds - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>DFW Geeks & Nerds</h5>
+                <p>Building a community for anime, gaming, and geek culture in Dallas-Fort Worth.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">About Us</a></li>
+                    <li><a href="#" class="text-white">Club Rules</a></li>
+                    <li><a href="#" class="text-white">Start a Chapter</a></li>
+                    <li><a href="#" class="text-white">Request a Vist/a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Connect</h5>
+                <p>Email: contact@dfwgeeksandnerds.com</p>
+                <p>Follow us on social media!</p>
+                <!-- Add social media icons here -->
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+            </div>
         </div>
-    </footer>
+        <hr class="bg-white">
+        <div class="text-center">
+            <p>&copy; 2026 DFWGeeksAndNerds. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
