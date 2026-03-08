@@ -23,6 +23,9 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+*/.vs/**
+*.sqlite
+
 # .NET Core
 project.lock.json
 project.fragment.lock.json
@@ -52,3 +55,5 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+VSWorkspaceState.json
+*.csproj.user
