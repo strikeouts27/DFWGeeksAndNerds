@@ -4,7 +4,7 @@ namespace DFWGeeksAndNerds.Controllers
 {
     public class CollectablesController : Controller
     {
-        public IActionResult Collectablesx()
+        public IActionResult Collectables()
         {
             return View();
         }
