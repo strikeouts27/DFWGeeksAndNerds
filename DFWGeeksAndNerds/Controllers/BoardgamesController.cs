@@ -1,15 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using DFWGeeksAndNerds.Models;
 
 namespace DFWGeeksAndNerds.Controllers
 {
-    public class VideoGamesController : Controller
-
+    public class BoardgamesController : Controller
     {
-        public IActionResult Videogames()
+        public IActionResult Boardgames()
         {
             return View();
         }
     }
-
 }
