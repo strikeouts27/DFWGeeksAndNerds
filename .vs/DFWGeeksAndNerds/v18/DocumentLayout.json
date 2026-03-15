@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 280,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "site.css",
+              "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\wwwroot\\css\\site.css",
+              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\wwwroot\\css\\site.css*",
+              "RelativeToolTip": "DFWGeeksAndNerds\\wwwroot\\css\\site.css*",
+              "ViewState": "AgIAABEAAAAAAAAAAAAMwC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-15T09:26:47.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADQAAAAAAAAAAAAawBcAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-15T06:17:58.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-15T05:48:24.865Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
