@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\controllers\\collectablescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\controllers\\collectablescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\collectables\\collectables.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\collectables\\collectables.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\videogames\\videogames.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\videogames\\videogames.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\news\\news.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\news\\news.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|e:\\programming_projects\\dallascollege\\asp_net\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,33 +22,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 280,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "News.cshtml",
-              "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\News\\News.cshtml",
-              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\News\\News.cshtml",
-              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\News\\News.cshtml",
-              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\News\\News.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-08T16:03:03.138Z",
-              "IsPinned": true,
+              "DocumentIndex": 0,
+              "Title": "site.css",
+              "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\wwwroot\\css\\site.css",
+              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\wwwroot\\css\\site.css*",
+              "RelativeToolTip": "DFWGeeksAndNerds\\wwwroot\\css\\site.css*",
+              "ViewState": "AgIAABEAAAAAAAAAAAAMwC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-15T09:26:47.278Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CollectablesController.cs",
-              "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Controllers\\CollectablesController.cs",
-              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Controllers\\CollectablesController.cs",
-              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Controllers\\CollectablesController.cs",
-              "RelativeToolTip": "DFWGeeksAndNerds\\Controllers\\CollectablesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T16:17:05.99Z",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADQAAAAAAAAAAAAawBcAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-15T06:17:58.532Z",
               "EditorCaption": ""
             },
             {
@@ -67,35 +58,9 @@
               "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAABoAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-08T16:14:21.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "VideoGames.cshtml",
-              "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\VideoGames\\VideoGames.cshtml",
-              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\VideoGames\\VideoGames.cshtml",
-              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\VideoGames\\VideoGames.cshtml",
-              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\VideoGames\\VideoGames.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-08T16:12:58.282Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Collectables.cshtml",
-              "DocumentMoniker": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Collectables\\Collectables.cshtml",
-              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Collectables\\Collectables.cshtml",
-              "ToolTip": "E:\\Programming_projects\\DallasCollege\\ASP_NET\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Collectables\\Collectables.cshtml",
-              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Collectables\\Collectables.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-08T16:12:10.748Z",
+              "WhenOpened": "2026-03-15T05:48:24.865Z",
               "EditorCaption": ""
             }
           ]
