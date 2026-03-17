@@ -5,41 +5,6 @@
     ViewData["Title"] = "Events Page";
 }
 
-<div class="container mt-5">
-    <h2 class="text-center mb-4">Event Calendar</h2>
-    <div class="calendar-container d-flex justify-content-center">
-        <iframe src="https://calendar.google.com/calendar/embed?src=e518c8237738ab06672eaafeb0e4d13a1ddd8805cb5ad7a126bf0f6ee0af109b%40group.calendar.google.com&ctz=America%2FChicago"
-                style="border: 0"
-                width="800"
-                height="600"
-                frameborder="0"
-                scrolling="no">
-        </iframe>
-    </div>
-    <div>
-        
-        <button data-bs-toggle="collapse" data-bs-target="#VenueForm" aria-expanded="true" aria-controls="VenueForm">Request New Event</button>
 
-    </div>
-    <div id="VenueForm" class="collapse">
-        <form asp-controller="Events" asp-action="AddEvent" method="post">
-            <div class="mb-3">
-                <label for="Venue" class="form-label">Venue Name</label>
-                <input asp-for="VenueName" type="text" class="form-control" id="venueid">
-            </div>
-            <div class="mb-3">
-                <label for="DateofEvent" class="form-label">Date of Event</label>
-                <input asp-for="DateofEvent" type="datetime" class="form-control" id="DateofEvent">
-            </div>
-            <div class="mb-3">
-                <label for="EventCost" class="form-label">Event Cost</label>
-                <input asp-for="EventCost" type="number" class="form-control" id="EventCost">
-            </div>
-            <div class="mb-3">
-                <label for="venueDescription" class="form-label">Venue Description</label>               
-                <textarea asp-for="VenueDescription" class="form-control" id="venueDescription" rows="3"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div>
-</div>
+
+
