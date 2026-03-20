@@ -5,9 +5,16 @@ namespace DFWGeeksAndNerds.Controllers
 {
     public class EventsController : Controller
     {
+        public ActionResult Index()
+        {
+            var model = new EventViewModel();
+            return View(model);
+        }
         public IActionResult Events()
         {
-            return View();
+            var model = new EventViewModel();
+            return View(model);
+            //return View();
         }
 
         // create a post method for the form

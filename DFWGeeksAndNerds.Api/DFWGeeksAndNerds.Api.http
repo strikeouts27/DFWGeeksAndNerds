@@ -1,0 +1,6 @@
+@DFWGeeksAndNerds.Api_HostAddress = http://localhost:5003
+
+GET {{DFWGeeksAndNerds.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

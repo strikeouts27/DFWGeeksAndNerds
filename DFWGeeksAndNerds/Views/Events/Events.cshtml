@@ -5,41 +5,74 @@
     ViewData["Title"] = "Events Page";
 }
 
-<div class="container mt-5">
-    <h2 class="text-center mb-4">Event Calendar</h2>
-    <div class="calendar-container d-flex justify-content-center">
-        <iframe src="https://calendar.google.com/calendar/embed?src=e518c8237738ab06672eaafeb0e4d13a1ddd8805cb5ad7a126bf0f6ee0af109b%40group.calendar.google.com&ctz=America%2FChicago"
-                style="border: 0"
-                width="800"
-                height="600"
-                frameborder="0"
-                scrolling="no">
-        </iframe>
-    </div>
-    <div>
-        
-        <button data-bs-toggle="collapse" data-bs-target="#VenueForm" aria-expanded="true" aria-controls="VenueForm">Request New Event</button>
 
-    </div>
-    <div id="VenueForm" class="collapse">
-        <form asp-controller="Events" asp-action="AddEvent" method="post">
-            <div class="mb-3">
-                <label for="Venue" class="form-label">Venue Name</label>
-                <input asp-for="VenueName" type="text" class="form-control" id="venueid">
-            </div>
-            <div class="mb-3">
-                <label for="DateofEvent" class="form-label">Date of Event</label>
-                <input asp-for="DateofEvent" type="datetime" class="form-control" id="DateofEvent">
-            </div>
-            <div class="mb-3">
-                <label for="EventCost" class="form-label">Event Cost</label>
-                <input asp-for="EventCost" type="number" class="form-control" id="EventCost">
-            </div>
-            <div class="mb-3">
-                <label for="venueDescription" class="form-label">Venue Description</label>               
-                <textarea asp-for="VenueDescription" class="form-control" id="venueDescription" rows="3"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div>
+<div class="calendar-wrapper">
+    <table id="calander">
+         <thead>
+             <tr>  
+                    @for (int i = 0; i < Model.days.Length; i++)
+                    {
+                        <th>@Model.days[i]</th>
+                    } 
+            </tr>
+        </thead>
+        @* <thead>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="empty"></td>
+                <td class="empty"></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td class="today">9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td class="empty"></td>
+                <td class="empty"></td>
+            </tr> 
+        </tbody> *@
+    </table>
 </div>
