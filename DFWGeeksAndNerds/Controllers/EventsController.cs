@@ -21,7 +21,27 @@ namespace DFWGeeksAndNerds.Controllers
         [HttpPost]
         public IActionResult AddEvent(EventViewModel eventViewModel)
         {
-            return RedirectToAction("Events"); 
+            return RedirectToAction("Events");
         }
+
+        [HttpPost]
+        public IActionResult Create(EventViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                // 1. Save to Database here
+                // 2. Redirect to a "Success" or "Index" page
+                return RedirectToAction("Success"); 
+            }
+            return View(model);
+        }
+
+        // New action for the success page
+        public IActionResult Success()
+        {
+            return View();
+        } 
+        
     }
+        
 }
