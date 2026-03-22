@@ -41,7 +41,33 @@ namespace DFWGeeksAndNerds.Controllers
         {
             return View();
         } 
-        
+
+        public IActionResult Calander(int? year, int? month)
+        {
+            var today = DateTime.Today;
+
+            var model = new CalendarViewModel
+            {
+                Year = year ?? today.Year,
+                Month = month ?? today.Month
+            };
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult GetEvents()
+        {
+            // Give FullCalendar some dummy data to render out of the box
+            var events = new[]
+            {
+                new { title = "Super Smash Bros Tournament", start = DateTime.Now.AddDays(2).ToString("yyyy-MM-dd"), color = "#378006" },
+                new { title = "Anime Studio Ghibli Fest", start = DateTime.Now.AddDays(5).ToString("yyyy-MM-dd"), color = "#0000ff" }
+            };
+
+            return Json(events);
+        }
+
     }
         
 }

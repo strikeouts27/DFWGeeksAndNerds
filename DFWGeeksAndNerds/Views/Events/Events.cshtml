@@ -5,7 +5,11 @@
     ViewData["Title"] = "Events Page";
 }
 
+@section Styles {
+    <link rel="stylesheet" href="~/css/EventCalendar.css" asp-append-version="true" />
+}
 
+<h1>If you wish to requewt an event for the club to consider please fill out the form below. You can also see scheduled events on this page. </h1>
 <div class="container mt-4">
     <form asp-action="Create" method="post">
         
@@ -41,7 +45,32 @@
 
         <button type="submit" class="btn btn-primary">Submit Event</button>
     </form>
+
+    <div class="mt-5">
+        <h3 class="mb-3">Events Calendar</h3>
+        <!-- Embeds the FullCalendar UI -->
+        <partial name="Calander" />
+    </div>
 </div>
+
+@section Scripts {
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                events: '/Events/GetEvents' // Fetches events from our new controller endpoint
+            });
+            calendar.render();
+        });
+    </script>
+}
 
 <!--
 <form>

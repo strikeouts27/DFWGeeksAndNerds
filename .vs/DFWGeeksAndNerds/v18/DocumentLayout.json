@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|c:\\users\\strib\\source\\repos\\dfwgeeksandnerds\\dfwgeeksandnerds\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|c:\\users\\strib\\source\\repos\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\events\\events.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\events\\events.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EventsController.cs",
-              "DocumentMoniker": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Controllers\\EventsController.cs",
-              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Controllers\\EventsController.cs",
-              "ToolTip": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Controllers\\EventsController.cs",
-              "RelativeToolTip": "DFWGeeksAndNerds\\Controllers\\EventsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T21:45:51.075Z",
-              "IsPinned": true,
+              "Title": "Events.cshtml",
+              "DocumentMoniker": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Events\\Events.cshtml",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Events\\Events.cshtml",
+              "ToolTip": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Events\\Events.cshtml",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Events\\Events.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAEBlwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-22T07:58:55.696Z",
               "EditorCaption": ""
             }
           ]
