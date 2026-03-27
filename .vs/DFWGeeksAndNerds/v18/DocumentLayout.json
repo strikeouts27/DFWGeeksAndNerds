@@ -27,8 +27,15 @@
               "RelativeDocumentMoniker": "..\\..\\..\\Desktop\\GitCommitPractices.md",
               "ToolTip": "C:\\Users\\strib\\Desktop\\GitCommitPractices.md",
               "RelativeToolTip": "..\\..\\..\\Desktop\\GitCommitPractices.md",
+<<<<<<< HEAD
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2026-03-27T18:15:56.868Z"
+=======
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-03-27T18:15:56.868Z",
+              "EditorCaption": ""
+>>>>>>> 862ff48c338b07a4ba922b32ce7c9fd7c8bed10d
             },
             {
               "$type": "Document",
@@ -40,7 +47,12 @@
               "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Events\\Events.cshtml",
               "ViewState": "AgIAAAoAAAAAAAAAAAAAAB4AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+<<<<<<< HEAD
               "WhenOpened": "2026-03-22T07:58:55.696Z"
+=======
+              "WhenOpened": "2026-03-22T07:58:55.696Z",
+              "EditorCaption": ""
+>>>>>>> 862ff48c338b07a4ba922b32ce7c9fd7c8bed10d
             }
           ]
         }
