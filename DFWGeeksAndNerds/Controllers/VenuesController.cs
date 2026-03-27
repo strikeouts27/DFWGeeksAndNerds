@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using DFWGeeksAndNerds.Models;
 
 namespace DFWGeeksAndNerds.Controllers
 {
-    public class PodcastsController : Controller
+    public class Venues : Controller
     {
-        public IActionResult Podcasts()
+        public IActionResult Index()
         {
             return View();
         }
