@@ -1,16 +1,16 @@
-﻿using DFWGeeksAndNerds.Api.Models;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using DFWGeeksAndNerds.Api.Models;
 
 namespace DFWGeeksAndNerds.Api.Controllers
 {
     // we can use the comment here and make the route more specific for api's and we can also include a version number for different versions. (optional)
+    // THe comment showed it how it was before Joseph changed it. 
     //[Route("api/version1/[controller]")]
     [Route("[controller]")] // this will take the name of the controller and use it as the route. so in this case it will be /games
     [ApiController]
     public class GamesController : ControllerBase
     {
-
         static List<Game> games = new List<Game>
         {
             new Game { Id = 1, Name = "Game 1" },
@@ -24,9 +24,11 @@ namespace DFWGeeksAndNerds.Api.Controllers
         [HttpGet]
         public IEnumerable<Game> Get()
 
-        // JOSEPH THE HEADSET WENT OUT ONE SEC
+        
         {
-            // the select function will be a projector. that projectotion can be molded to what you want it to be. 
+            // this is a blueprint for a json message. 
+
+            // the select function acts like a projecter. that projectotion can be molded to what you want it to be. 
             // the projector will be given numbers between 1-5 while that is happening operate this lambda function on this iteartion. 
             // make a range of numbers from one to five. as you iterate, showcase this index and make a game object in that enumerable. 
             // once you do do the logic inside of the curly brances for each item of the range and than put that information in an array.
@@ -54,11 +56,13 @@ namespace DFWGeeksAndNerds.Api.Controllers
         [HttpPut("id")]
         public async Task Update(int id,[FromBody] GameDTO game)
         {
+            // this will search for the game with an id that we want to update. if if it does't find anything it will return null.'
             var gameToUpdate = games.FirstOrDefault(p => p.Id.Equals(id));
             if (gameToUpdate == null)
                 return;
-
-                gameToUpdate.Name = game.Name;
+            // if the search does find something, it will update the information to what is targeted by the code below. \
+            // it is possble to write code in which it finds nothing and will create a new entry in the datbase.
+                 gameToUpdate.Name = game.Name;
                 gameToUpdate.Description = game.Description;
                 games.RemoveAll(p => p.Id.Equals(id));
 

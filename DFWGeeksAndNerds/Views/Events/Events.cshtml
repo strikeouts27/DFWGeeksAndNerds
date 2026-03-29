@@ -15,9 +15,16 @@
         
         <div class="mb-3">
             <label asp-for="EventHost" class="form-label"></label>
-            <input asp-for="EventHost" class="form-control" placeholder="Enter host name">
+            <input asp-for="EventHost" class="form-control" placeholder="Enter host name.">
             <div class="form-text">We'll never share your host details with anyone else.</div>
             <span asp-validation-for="EventHost" class="text-danger small"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="EventName" class="form-label"></label>
+            <input asp-for="EventName" class="form-control" placeholder="Enter your event name." />
+            <div class="form-text">We'll never share your host details with anyone else.</div>
+            <span asp-validation-for="EventName" class="text-danger small"></span>
         </div>
 
         <div class="mb-3">

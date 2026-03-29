@@ -1,5 +1,7 @@
 ﻿namespace DFWGeeksAndNerds.Api.Models
 {
+
+    // use control . when renaming classes to rename that class everywhere in the project.
     public class Game
     {
         public int Id { get; set; }

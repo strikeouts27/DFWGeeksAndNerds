@@ -69,3 +69,8 @@ Provide:
 Takeaways: 
 
 When you create an api, you need to set your website as the setupr project otherwise it will target the api which won't start right away.
+
+Zoom Meeting Notes From 03.15.26 - (Sessions End Date) 
+
+endpoints are like functions. it will return information. 
+

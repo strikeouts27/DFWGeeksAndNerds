@@ -34,7 +34,9 @@ namespace DFWGeeksAndNerds.Api
                 app.MapOpenApi();
             }
 
-            // This will enable the middleware to serve the generated Swagger as a JSON endpoint.
+            // These lines of code set up the swagger service. Swagger is like a menu for a waiter. 
+            // It tells the waiter (the API) what you want to order (the endpoints) and how to prepare it (the request and response formats).
+
             app.UseSwagger();
 
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "DFW Geeks and Nerds API v1"));
