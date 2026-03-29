@@ -14,6 +14,7 @@
 
     public class EventDTO
     {
+        public int Id { get; set; }
         public required string EventName { get; set; }
         public required string EventHost { get; set; }
         public required int RSVPCount { get; set; }

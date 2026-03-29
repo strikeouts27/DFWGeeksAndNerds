@@ -13,17 +13,29 @@ namespace DFWGeeksAndNerds.Models
         [Required(ErrorMessage = "Host name is required")]
         [Display(Name = "Event Host")]
         public string EventHost { get; set; }
-        [Range(1, 1000, ErrorMessage = "Guest count must be between 1 and 1000")]
-        [Display(Name = "Estimated Guests")]
+
+        // EVENT NAME 
+        [Required(ErrorMessage = "Event name is required")]
+        public string EventName { get; set; }
+
+        // GUEST COUNT 
         public int GuestCount { get; set; }
         [Required]
         [Display(Name = "Venue Name")]
+
+        // VENUE NAME 
         public string VenueName { get; set; }
+
+        // EVENT COST
         [DataType(DataType.Currency)]
         [Display(Name = "Total Budget")]
         public double EventCost { get; set; }
+
+        // TECH REQUIREMENTS
         public string TechRequirements { get; set; }
         [Display(Name = "Is this event kid-friendly?")]
+
+        // KID FRIENDLY
         public bool IsKidFriendly { get; set; }
         [DataType(DataType.MultilineText)]
         public string VenueDescription { get; set; }
