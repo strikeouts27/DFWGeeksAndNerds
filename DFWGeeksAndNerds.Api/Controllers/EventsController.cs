@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Http;
 using DFWGeeksAndNerds.Api.Models;
 using System.ComponentModel;
+using DFWGeeksAndNerds.Api.Providers;
+using System.Runtime.CompilerServices;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -69,6 +71,14 @@ namespace DFWGeeksAndNerds.Api.Controllers
             },
         };
         private object games;
+        private readonly NerdsandGeeksDbContext _dbContext;
+
+        // dependency injection is told to inject the NerdsandGeeksDbContext into the constructor of the EventsController. This allows the controller to use the database context for data operations, such as querying or saving data related to events.
+        // This injected db context is only available in the scope of the event controller constructor method. 
+        public EventsController(NerdsandGeeksDbContext dbContext)
+        {
+           _dbContext = dbContext;
+        }
 
         // GET: api/<EventsController>
         // IEnumerable is a collection of storage containers.
@@ -76,7 +86,8 @@ namespace DFWGeeksAndNerds.Api.Controllers
         [HttpGet]
         public IEnumerable<EventDTO> Get()
         {
-            return events;
+
+            return _dbContext.Events.ToList();
         }
 
         // POST api/<EventsController>

@@ -16,7 +16,7 @@
     // DTO's are pure data. They will be what is sent to the client THe programmer is the converter. we just make a shipment of pure data. 
     public class GameDTO
     {
-        
+        public int Id { get; set; }
         public string Name { get; set; }
         public string? Description { get; set; }
     }

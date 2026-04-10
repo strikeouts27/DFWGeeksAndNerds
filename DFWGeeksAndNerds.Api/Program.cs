@@ -1,4 +1,5 @@
 
+using DFWGeeksAndNerds.Api.Providers;
 using Microsoft.OpenApi;
 
 namespace DFWGeeksAndNerds.Api
@@ -10,6 +11,12 @@ namespace DFWGeeksAndNerds.Api
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            // This line of code adds the NerdsandGeeksDbContext to the service collection, which allows the application to use it for database operations.
+            // .AddDbContext registers the DbContext with the dependency injection container, so it can be injected into controllers and other services that need to interact with the database.
+            // dependency injection is a contianer with services and methods that can be used throughout the project. 
+            // dependency injection is used used builder.Services -> builder is the container. .Add -> something
+            builder.Services.AddDbContext<NerdsandGeeksDbContext>();
 
             builder.Services.AddSwaggerGen(C =>
             {
