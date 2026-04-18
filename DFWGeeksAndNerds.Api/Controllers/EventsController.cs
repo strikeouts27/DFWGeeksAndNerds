@@ -135,7 +135,7 @@ namespace DFWGeeksAndNerds.Api.Controllers
             eventToUpdate.EventDate = updatedEvent.EventDate;
             eventToUpdate.IsKidFriendly = updatedEvent.IsKidFriendly;
             eventToUpdate.Description = updatedEvent.Description;
-
+            _dbContext.Events.Update(eventToUpdate);
             _dbContext.SaveChanges();
         
         }

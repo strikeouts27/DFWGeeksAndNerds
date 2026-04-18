@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using DFWGeeksAndNerds.Api.Models;
 using DFWGeeksAndNerds.Api.Providers;
 
+// TO RUN THIS PROGRAM USE http://localhost:5003/swagger/index.html 
+// use the dotnet build and dotnet run commands in the terminal to run the program. 
+
 namespace DFWGeeksAndNerds.Api.Controllers
 {
     // we can use the comment here and make the route more specific for api's and we can also include a version number for different versions. (optional)
@@ -84,7 +87,8 @@ namespace DFWGeeksAndNerds.Api.Controllers
 
                 // this command was for mock data setup. 
                 // games.Add(gameToUpdate);
-
+                
+                _dbContext.Games.Update(gameToUpdate);
                 _dbContext.SaveChanges(); 
                 
             }
