@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using DFWGeeksAndNerds.Api.Models;
+using DFWGeeksAndNerds.Api.Providers;
 
 namespace DFWGeeksAndNerds.Api.Controllers
 {
@@ -31,7 +32,7 @@ namespace DFWGeeksAndNerds.Api.Controllers
 
         // write the [HttpGet] method and have it target the correc table. 
         [HttpGet]
-        public IEnumerable<Game> Get()
+        public IEnumerable<GameDTO> Get()
 
         
         {
@@ -51,7 +52,7 @@ namespace DFWGeeksAndNerds.Api.Controllers
             
             // microsoft has a built in json serializer that will automatically serialize the object to json when we return it from the controller.
             // so we don't have to do a conversion unless we change the default settings so much that we have to do it ourselves.
-            return _dbcontext.Games.ToList();    
+            return _dbContext.Games.ToList();    
         }
 
         [HttpPost]
@@ -92,10 +93,10 @@ namespace DFWGeeksAndNerds.Api.Controllers
         public async Task Delete(int id)
         {
             var gameToDelete = _dbContext.Games.FirstOrDefault(p => p.Id.Equals(id)); 
-            if (eventToDelete == null)
+            if (gameToDelete == null)
                 return; 
             
-            _dbContext.Events.Remove(eventToDelete); 
+            _dbContext.Games.Remove(gameToDelete); 
             _dbContext.SaveChanges(); 
 
             // we used this commented method below during the mock data stage. 
