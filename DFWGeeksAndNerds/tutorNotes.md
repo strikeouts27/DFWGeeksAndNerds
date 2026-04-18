@@ -74,3 +74,21 @@ Zoom Meeting Notes From 03.15.26 - (Sessions End Date)
 
 endpoints are like functions. it will return information. 
 
+04.12.26 
+
+If you have a popular website and there is a lot of web traffic it is not good for the database to be sending full search queries of data for the entire table when only a few fields of information are required, as doing so would result in a slowed webpage. A great example of this would be a view for todays events instead of all of the events. 
+
+So we can subsets of data using sql with event dates for today. We can also do searches for ranges of dates. 
+
+Endpoints do not have anything to say to the api, we have to create another endpoint with a new method. GetTodaysEvents(), how do you represent that on your website? 
+
+Base Url/Events/Today 
+
+i am going to get events for today. 
+Entity framework, non sql query, between todays it transmits the data like any other requeest. 
+The difference is that you can have a non crud endpoint that can have custom data packages that you can transmit. 
+
+If you want even more filtering, like events in my city. 
+We have to pass data at the point. Because todays date is a pure fitler, but now we have to do a city and filter, we need to have a create a customized request we have to use a post to send across the data in the body. 
+ POST GetToday(){} 
+ Get GetToday(){}

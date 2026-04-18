@@ -11,16 +11,25 @@ namespace DFWGeeksAndNerds.Api.Controllers
     [ApiController]
     public class GamesController : ControllerBase
     {
-        static List<Game> games = new List<Game>
+        // static List<Game> games = new List<Game>
+        // {
+        //     new Game { Id = 1, Name = "Game 1" },
+        //     new Game { Id = 2, Name = "Game 2" },
+        //     new Game { Id = 3, Name = "Game 3" },
+        //     new Game { Id = 4, Name = "Game 4" },
+        //     new Game { Id = 5, Name = "Game 5" },
+        // };
+
+        // make a variable to hold the database context and provide a label for it via variable name. 
+        private readonly NerdsandGeeksDbContext _dbContext; 
+        
+        // create a constructor for the db context. 
+        public GamesController(NerdsandGeeksDbContext dbContext)
         {
-            new Game { Id = 1, Name = "Game 1" },
-            new Game { Id = 2, Name = "Game 2" },
-            new Game { Id = 3, Name = "Game 3" },
-            new Game { Id = 4, Name = "Game 4" },
-            new Game { Id = 5, Name = "Game 5" },
-        };
+            _dbContext = dbContext; 
+        }
 
-
+        // write the [HttpGet] method and have it target the correc table. 
         [HttpGet]
         public IEnumerable<Game> Get()
 
@@ -42,13 +51,14 @@ namespace DFWGeeksAndNerds.Api.Controllers
             
             // microsoft has a built in json serializer that will automatically serialize the object to json when we return it from the controller.
             // so we don't have to do a conversion unless we change the default settings so much that we have to do it ourselves.
-            return games;
+            return _dbcontext.Games.ToList();    
         }
 
         [HttpPost]
-        public async Task Post([FromBody] Game game) 
+        public async Task Post([FromBody] GameDTO game) 
         {
-            games.Add(game);
+            _dbContext.Games.Add(game);
+            _dbContext.SaveChanges();
         }
 
         // patch update or insert if it doesn't exisit insert it, if it does exist update. 
@@ -57,23 +67,39 @@ namespace DFWGeeksAndNerds.Api.Controllers
         public async Task Update(int id,[FromBody] GameDTO game)
         {
             // this will search for the game with an id that we want to update. if if it does't find anything it will return null.'
-            var gameToUpdate = games.FirstOrDefault(p => p.Id.Equals(id));
+            var gameToUpdate = _dbContext.Games.FirstOrDefault(p => p.Id.Equals(id));
             if (gameToUpdate == null)
                 return;
+
             // if the search does find something, it will update the information to what is targeted by the code below. \
             // it is possble to write code in which it finds nothing and will create a new entry in the datbase.
-                 gameToUpdate.Name = game.Name;
+            // id's should not be updated. leave the id field alone. 
+            // update the attributes w eneed to update . see your corresponding models file. 
+                gameToUpdate.Name = game.Name;
                 gameToUpdate.Description = game.Description;
-                games.RemoveAll(p => p.Id.Equals(id));
+                
+                // this commented method was used for mock data. it was designed to clean up the entries we made when we were done testing. 
+                // games.RemoveAll(p => p.Id.Equals(id));
 
-                games.Add(gameToUpdate);
+                // this command was for mock data setup. 
+                // games.Add(gameToUpdate);
+
+                _dbContext.SaveChanges(); 
+                
             }
-
 
         [HttpDelete]
         public async Task Delete(int id)
         {
-            games.RemoveAll(p => p.Id.Equals(id));
+            var gameToDelete = _dbContext.Games.FirstOrDefault(p => p.Id.Equals(id)); 
+            if (eventToDelete == null)
+                return; 
+            
+            _dbContext.Events.Remove(eventToDelete); 
+            _dbContext.SaveChanges(); 
+
+            // we used this commented method below during the mock data stage. 
+            // games.RemoveAll(p => p.Id.Equals(id));
         }
 
     }

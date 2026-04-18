@@ -73,11 +73,13 @@ namespace DFWGeeksAndNerds.Api.Controllers
         //         IsKidFriendly = false,
         //     },
         // };
-        private object games;
+
+        // private object games;
         private readonly NerdsandGeeksDbContext _dbContext;
 
         // dependency injection is told to inject the NerdsandGeeksDbContext into the constructor of the EventsController. This allows the controller to use the database context for data operations, such as querying or saving data related to events.
         // This injected db context is only available in the scope of the event controller constructor method. 
+        // Constructor 
         public EventsController(NerdsandGeeksDbContext dbContext)
         {
            _dbContext = dbContext;

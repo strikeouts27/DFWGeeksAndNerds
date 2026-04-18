@@ -49,6 +49,10 @@ namespace DFWGeeksAndNerds.Api.Providers
         // the best validation would be on the website. fail fast quickly. 
         // website, the models, the database all have data validation failsafe available. 
         // if data is not transmitting understanding where the locks are is critical.
+        // entity framework uses ORM's to map relationships between code and tables. 
+        // most of the time we want a 1 to 1 representation of data to models. 
+        // models had to match the tables. 
+        // the table has a primary key, we made the id field the primary key table 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<EventDTO>()
