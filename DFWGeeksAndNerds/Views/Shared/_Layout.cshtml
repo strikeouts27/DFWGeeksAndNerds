@@ -75,7 +75,13 @@
         </main>
     </div>
 
-    <footer class="bg-dark text-white py-4">
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+<footer class="bg-dark text-white py-4">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -96,9 +102,9 @@
                 <p>Email: contact@dfwgeeksandnerds.com</p>
                 <p>Follow us on social media!</p>
                 <!-- Add social media icons here -->
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-x-twitter"></i>
-                    <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
             </div>
         </div>
         <hr class="bg-white">
@@ -107,9 +113,4 @@
         </div>
     </div>
 </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
 </html>
