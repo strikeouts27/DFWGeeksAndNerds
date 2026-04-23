@@ -1,10 +1,21 @@
 ﻿using DFWGeeksAndNerds.Models;
+using DFWGeeksAndNerds.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DFWGeeksAndNerds.Controllers
 {
     public class EventsController : Controller
     {
+        // This was created in EventDataServices.cs and registered in Program.cs
+        // this is called dependency injection. we are asking the framework to give us an instance of the service when the controller is created.
+        // we create a read only because the service was NOT accesible to the entire controller. So we made this copy of it for the controller to use. 
+        private readonly EventsDataService _eventDataService;
+
+
+        public EventsController(EventsDataService eventDataService )
+        {
+            _eventDataService = eventDataService;
+        }
         public ActionResult Index()
         {
             var model = new EventViewModel();
