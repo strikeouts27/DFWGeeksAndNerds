@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|c:\\users\\strib\\source\\repos\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\venues\\venues.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\venues\\venues.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|c:\\users\\strib\\source\\repos\\dfwgeeksandnerds\\dfwgeeksandnerds\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ED45B343-BA3B-45CE-AC65-C416AA51FBB4}|DFWGeeksAndNerds.Api\\DFWGeeksAndNerds.Api.csproj|c:\\users\\strib\\source\\repos\\dfwgeeksandnerds\\dfwgeeksandnerds.api\\controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED45B343-BA3B-45CE-AC65-C416AA51FBB4}|DFWGeeksAndNerds.Api\\DFWGeeksAndNerds.Api.csproj|solutionrelative:dfwgeeksandnerds.api\\controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED45B343-BA3B-45CE-AC65-C416AA51FBB4}|DFWGeeksAndNerds.Api\\DFWGeeksAndNerds.Api.csproj|c:\\users\\strib\\source\\repos\\dfwgeeksandnerds\\dfwgeeksandnerds.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{ED45B343-BA3B-45CE-AC65-C416AA51FBB4}|DFWGeeksAndNerds.Api\\DFWGeeksAndNerds.Api.csproj|solutionrelative:dfwgeeksandnerds.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|c:\\users\\strib\\source\\repos\\dfwgeeksandnerds\\dfwgeeksandnerds\\dfwgeeksandnerds\\dfwgeeksandnerds.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\dfwgeeksandnerds\\dfwgeeksandnerds.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,44 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1257,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "DFWGeeksAndNerds\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-23T22:11:06.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GamesController.cs",
-              "DocumentMoniker": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds.Api\\Controllers\\GamesController.cs",
-              "RelativeDocumentMoniker": "DFWGeeksAndNerds.Api\\Controllers\\GamesController.cs",
-              "ToolTip": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds.Api\\Controllers\\GamesController.cs",
-              "RelativeToolTip": "DFWGeeksAndNerds.Api\\Controllers\\GamesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T17:37:35.965Z",
+              "Title": "Venues.cshtml",
+              "DocumentMoniker": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Venues\\Venues.cshtml",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Venues\\Venues.cshtml",
+              "ToolTip": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Venues\\Venues.cshtml*",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Venues\\Venues.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-23T21:18:42.485Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\DFWGeeksAndNerds.Api\\Program.cs",
-              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\DFWGeeksAndNerds\\DFWGeeksAndNerds.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\DFWGeeksAndNerds.Api\\Program.cs",
-              "RelativeToolTip": "DFWGeeksAndNerds\\DFWGeeksAndNerds\\DFWGeeksAndNerds.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAA==",
+              "Title": "GamesController.cs",
+              "DocumentMoniker": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds.Api\\Controllers\\GamesController.cs",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds.Api\\Controllers\\GamesController.cs",
+              "ToolTip": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds.Api\\Controllers\\GamesController.cs",
+              "RelativeToolTip": "DFWGeeksAndNerds.Api\\Controllers\\GamesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-12T18:10:59.143Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "DFWGeeksAndNerds.Api\\appsettings.json",
-              "ToolTip": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds.Api\\appsettings.json",
-              "RelativeToolTip": "DFWGeeksAndNerds.Api\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-04T16:21:54.617Z"
+              "WhenOpened": "2026-04-18T17:37:35.965Z"
             }
           ]
         }
