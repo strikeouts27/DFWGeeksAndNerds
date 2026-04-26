@@ -23,6 +23,10 @@ public class EventsDataService
         var content = await response.Content.ReadAsStringAsync();
         // desearlize think convert from string to object. it will assign all of the proprties of json into the corresponding fields by name.
         // this will return a list of events. 
-        return System.Text.Json.JsonSerializer.Deserialize<List<EventDTO>>(content);
+
+        // .JsonSerializer is microsofts json convertor built by microsoft. joseph did NOT reccomend using it. .JsonSerializer 
+        //return System.Text.Json.JsonSerializer.Deserialize<List<EventDTO>>(content);
+
+        return Newtonsoft.Json.JsonConvert.DeserializeObject<List<EventDTO>>(content);
     }
 }

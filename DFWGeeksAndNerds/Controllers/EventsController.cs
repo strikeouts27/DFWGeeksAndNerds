@@ -16,14 +16,16 @@ namespace DFWGeeksAndNerds.Controllers
         {
             _eventDataService = eventDataService;
         }
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
+            
             var model = new EventViewModel();
             return View(model);
         }
-        public IActionResult Events()
+        public async Task<IActionResult> Events()
         {
-            var model = new EventViewModel();
+            var events = await _eventDataService.GetEventsAsync();
+            var model = EventViewModel.ConvertToViewModelList(events);
             return View(model);
             //return View();
         }
