@@ -10,6 +10,10 @@ using Microsoft.EntityFrameworkCore;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 // DATABASE NEEDS TO BE TURNED ON IN ORDER TO RUN ANY OF THESE METHODS. 
+// TO RUN THIS PROGRAM USE http://localhost:5003/swagger/index.html 
+// use the dotnet build and dotnet run commands in the terminal to run the program. 
+
+
 namespace DFWGeeksAndNerds.Api.Controllers
 {
     [Route("[controller]")]

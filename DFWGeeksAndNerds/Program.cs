@@ -1,8 +1,20 @@
+using DFWGeeksAndNerds.Services;    
+    
 // Create the app builder: loads config/logging defaults and prepares DI + hosting using command-line args.
 var builder = WebApplication.CreateBuilder(args);
 
 // Register MVC services so controllers and Razor views are available.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddHttpClient("GeeksAndNerdsAPI", client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5003/");
+    client.DefaultRequestHeaders.Add("Accept", "application/json");
+});
+
+// this will create a new service for each inital call to the service. Every time a page or controller calls for the service, it will create a new instance of the service. 
+// look up singletons in your spare time. -> when you want the data to be reused for logins and stuff. no session states. 
+builder.Services.AddScoped<EventsDataService>();
 
 // Build the app after all services are registered.
 var app = builder.Build();

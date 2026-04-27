@@ -60,3 +60,4 @@ TestResult.xml
 nunit-*.xml
 VSWorkspaceState.json
 *.csproj.user
+password.txt

@@ -1,5 +1,5 @@
 ﻿@using DFWGeeksAndNerds.Models;
-@model EventViewModel; 
+@model List<EventViewModel>;
 
 @{
     ViewData["Title"] = "Events Page";
@@ -8,8 +8,39 @@
 @section Styles {
     <link rel="stylesheet" href="~/css/EventCalendar.css" asp-append-version="true" />
 }
+<a href="c:\users\strib\source\repos\dfwgeeksandnerds\dfwgeeksandnerds\views\events\calander.cshtml">c:\users\strib\source\repos\dfwgeeksandnerds\dfwgeeksandnerds\views\events\calander.cshtml</a>
+<div>
+    <div class="container"> 
+        @{
+            int daysinmonth = DateTime.DaysInMonth(DateTime.Today.Year, DateTime.Today.Month);
+            int currentDay = 1; 
+        }
+        @daysinmonth
+        @for(int y = 1; y<6; y++){
+        <div class="row">
+            @for(int x=1; x < 8; x++)
+            {
+                    @if (currentDay > daysinmonth)
+                    {
+                        <div class="col-1 border border-dark calander-box calander-box-disabled"></div>
+                    } else
+                    {
+                        <div class="col-1 border border-dark calander-box">@currentDay</div>
+                        currentDay++;
+                    }
+               
+                    
+                }
+            </div>
+            
+              
+        }
 
-<h1>If you wish to requewt an event for the club to consider please fill out the form below. You can also see scheduled events on this page. </h1>
+    </div>
+</div>
+
+@* <h1>If you wish to request an event for the club to consider please fill out the form below. You can also see scheduled events on this page. </h1>
+
 <div class="container mt-4">
     <form asp-action="Create" method="post">
         
@@ -77,7 +108,7 @@
             calendar.render();
         });
     </script>
-}
+} *@
 
 <!--
 <form>

@@ -8,3 +8,13 @@
   width: 100%;
   object-fit: cover;
 }
+
+.calander-box {
+    width: 150px; 
+    height: 175px;
+}
+
+.calander-box-disabled{
+    background-color: darkgray; 
+
+}

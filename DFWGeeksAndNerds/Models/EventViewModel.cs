@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using DFWGeeksAndNerds.DTOs;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace DFWGeeksAndNerds.Models
@@ -66,6 +67,39 @@ namespace DFWGeeksAndNerds.Models
         //    days = new string[] { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
         //}
         */
+        // the internal keyword is used to restrict access to the method within the same project
+        // this is the standard way of dealing with a basic dto. 
+        internal static EventViewModel ConvertToViewModel(EventDTO dto)
+        {
+            return new EventViewModel
+            {
+                // the left side of the equals sign is related to the properties of the event view model. 
+                // the right side of the equals sign is related to the properties of the event DTO.
+                EventHost = dto.EventHost,
+                EventName = dto.EventName,
+                GuestCount = dto.GuestCount,
+                VenueName = dto.VenueName,
+                DateofEvent = dto.EventDate,
+                IsKidFriendly = dto.IsKidFriendly,
+                VenueDescription = dto.Description,
+                // if the data types don't line up use the parse method to convert it to the rigth data type.
+                // DateofEvent = DateTime.Parse(dto.EventDate),
+            };
+        }
 
+        // this method loops through the dtos sent to it and converts each one to a view model using the ConvertToViewModel method. it then adds each view model to a list and returns the list of view models.
+        // we don't want outsiders aware of methods and other information. just the data objects. 
+        // dto is to send data in and out. 
+        // view model is for functionality for data, present, calculate etc. 
+        // this method is for handling dto's that were transferred as lists. 
+        internal static List<EventViewModel> ConvertToViewModelList(List<EventDTO> dtos)
+        {
+            var viewModels = new List<EventViewModel>();
+            foreach (var dto in dtos)
+            {
+                viewModels.Add(ConvertToViewModel(dto));
+            }
+            return viewModels;
+        }
     }
 }
