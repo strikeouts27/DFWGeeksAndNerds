@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|c:\\users\\strib\\source\\repos\\dfwgeeksandnerds\\dfwgeeksandnerds\\wwwroot\\venues.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\wwwroot\\venues.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|c:\\users\\strib\\source\\repos\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\venues\\venues.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\venues\\venues.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|c:\\users\\strib\\source\\repos\\dfwgeeksandnerds\\dfwgeeksandnerds\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|c:\\users\\strib\\source\\repos\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\venues\\venues.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\venues\\venues.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,39 +21,46 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 1693,
+          "DockedWidth": 2032,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Venues.cshtml",
-              "DocumentMoniker": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Venues\\Venues.cshtml",
-              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Venues\\Venues.cshtml",
-              "ToolTip": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Venues\\Venues.cshtml*",
-              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Venues\\Venues.cshtml*",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACEAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-27T17:52:29.836Z",
+              "Title": "Venues.css",
+              "DocumentMoniker": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\wwwroot\\Venues.css",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\wwwroot\\Venues.css",
+              "ToolTip": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\wwwroot\\Venues.css",
+              "RelativeToolTip": "DFWGeeksAndNerds\\wwwroot\\Venues.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-27T21:20:46.748Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 354,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "DFWGeeksAndNerds\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Title": "Venues.cshtml",
+              "DocumentMoniker": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Venues\\Venues.cshtml",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Venues\\Venues.cshtml",
+              "ToolTip": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Venues\\Venues.cshtml",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Venues\\Venues.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-27T17:52:29.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Venues.css",
+              "DocumentMoniker": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Venues\\Venues.css",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Venues\\Venues.css",
+              "ToolTip": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Venues\\Venues.css",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Venues\\Venues.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-04-27T18:29:03.099Z",
+              "WhenOpened": "2026-04-27T18:54:34.942Z",
               "EditorCaption": ""
             }
           ]

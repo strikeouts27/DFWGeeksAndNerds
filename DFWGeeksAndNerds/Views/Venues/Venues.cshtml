@@ -1,134 +1,62 @@
 @{
     ViewData["Title"] = "Venues Page";
 }
+@section Styles {
+    <link rel="stylesheet" href="~/Venues.css" asp-append-version="true" />
+}
 
-<div class="row mt-4 p-5 bg-primary text-white rounded">
+<!-- Jumbotron Section -->
+<div class="row mt-4 p-5 bg-primary text-white rounded mb-4">
     <h1>Jumbotron Example</h1>
     <p>Lorem ipsum...</p>
 </div>
 
-
-<div class="row mt-4 mb-5 bg-info text-white rounded">
-    <!-- First Carousel -->
-
-    <div class="col-7">
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-            <!-- Indicators/dots -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-            </div>
-
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner container">
-                <div class="carousel-item active">
-                    <img src="~/images/CommonGroundGames.jpg" alt="CommonGroundGamesLogo" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="~/images/CommonGroundGamesOutside.png" alt="CommonGroundGamesOutside" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="~/images/commongroundgamesevents.png" />" alt="CommonGroundGamesEvents" class="d-block w-100 responsive">
-                </div>
-            </div>
-
-
-            <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
-    </div>
-    <div class="col-5">TEXT SECTION</div>
-</div>
-
-
+<!-- Main Content Row -->
 <div class="row">
-    <!-- Second Carousel -->
-    <div class="col-7">
-        <!-- Carousel -->
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-            <!-- Indicators/dots -->
+    <!-- Left Column: Carousel (takes up 8 of 12 columns on medium screens and larger) -->
+    <div class="col-md-8 mb-3">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-
-            <!-- The slideshow/carousel -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="~/images/CommonGroundGames.jpg" alt="CommonGroundGamesLogo" class="d-block w-100">
+                    <img class="d-block w-100 carousel-custom-img" src="/images/CommonGroundGamesOutside.jpg" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img src="~/images/CommonGroundGamesOutside.png" alt="CommonGroundGamesOutside" class="d-block w-100">
+                    <img class="d-block w-100 carousel-custom-img" src="/images/CommonGroundGames.jpg" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img src="~/images/commongroundgamesevents.png" />" alt="CommonGroundGamesEvents" class="d-block w-100">
+                    <img class="d-block w-100 carousel-custom-img" src="/images/CommonGroundGamesEvents.jpg" alt="Third slide">
                 </div>
             </div>
-
-
-            <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
             </button>
         </div>
     </div>
-    <div class="col-5">
-        TEXT
-    </div>
 
+    <!-- Right Column: Independent Text (takes up 4 of 12 columns) -->
+    <div class="col-md-4">
+        <div class="p-3 border rounded bg-light h-100">
+            <h3>Common Ground Games</h3>
+            <p>
+                Welcome to Common Ground Games! This text sits completely independent of the carousel. 
+                It will not move when the slides transition.
+            </p>
+            <p>
+                <strong>Location:</strong> 1328 Inwood Rd, Dallas, TX<br />
+                <strong>Hours:</strong> Open daily
+            </p>
+            <a href="#" class="btn btn-primary mt-2">Visit Website</a>
+        </div>
+    </div>
 </div>
 
-   
-<div class="row">
-    <div class="col-7">
-        <!-- Carousel -->
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-            <!-- Indicators/dots -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-            </div>
-
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="~/images/CommonGroundGames.jpg" alt="CommonGroundGamesLogo" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="~/images/CommonGroundGamesOutside.png" alt="CommonGroundGamesOutside" class="d-block w-100">
-                </div>
-                <div class="carousel-item">
-                    <img src="~/images/commongroundgamesevents.png" />" alt="CommonGroundGamesEvents" class="d-block w-100">
-                </div>
-            </div>
-
-            <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
-    </div>
-
-        <div class="col-5">
-            TEXT 
-        </div>
-    
-
-</div>

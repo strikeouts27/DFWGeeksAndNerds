@@ -1,2 +1,5 @@
-﻿body {
+.carousel-custom-img {
+    height: 500px; /* You can increase or decrease this number to fit your design */
+    object-fit: cover; /* This makes the image zoom and crop cleanly instead of squishing */
+    width: 100%;
 }
