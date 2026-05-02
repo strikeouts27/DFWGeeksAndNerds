@@ -12,28 +12,85 @@
 <div>
     <div class="container"> 
         @{
+            <!-- TODO CREATE MONTHS-->
+            string monthName = DateTime.Now.ToString("MMMM");
+            <!-- To get all of the months in a list --> 
+            List<string> monthNames = new List<string>();
+            <!-- Loop through the months and add them to the list -->
+            for (int i = 1; i <= 12; i++)
+            {
+                monthNames.Add(new DateTime(DateTime.Now.Year, i, 1).ToString("MMMM"));
+            }
+            <!--I need the current month to be displayed on the page -->
+            string currentMonth = DateTime.Now.ToString("MMMM");
+        }
+        <!--Display the month name -->
+        <h1>@currentMonth</h1>
+        <!-- I need a row to show the days of the week --> 
+
+        @{
+
+            <!-- LINE THEM UP SOMEHOW -->
+
+            // Get the number of days in the current month
             int daysinmonth = DateTime.DaysInMonth(DateTime.Today.Year, DateTime.Today.Month);
             int currentDay = 1; 
-        }
-        @daysinmonth
-        @for(int y = 1; y<6; y++){
-        <div class="row">
-            @for(int x=1; x < 8; x++)
+            
+            <!--Get what the first date of the month is.  -->
+            DateTime firstDayOfMonth = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
+            
+            <!-- Get the day of the week for the first date of the month -->
+            
+
+            DayOfWeek firstDayOfWeek = firstDayOfMonth.DayOfWeek;
+            <!-- It has to search for the first day of the month and have a starting point --> 
+            <!-- I need something that is indexed --> 
+            List<DayOfWeek> daysOfWeek = new List<DayOfWeek>()
             {
+                DayOfWeek.Sunday,
+                DayOfWeek.Monday,
+                DayOfWeek.Tuesday,
+                DayOfWeek.Wednesday,
+                DayOfWeek.Thursday,
+                DayOfWeek.Friday,
+                DayOfWeek.Saturday
+            };
+            
+            
+            <!-- It has to know at what point in the index to start iterating from --> 
+            int startIndex = daysOfWeek.IndexOf(firstDayOfWeek);
+        }
+    
+        <div class="row">
+        @for (int count = 0; count < daysOfWeek.Count; count++)
+        {
+            int i = (startIndex + count) % daysOfWeek.Count;
+            <div class="col-1 text-center fw-bold">
+                @daysOfWeek[i]
+            </div>
+        }           
+   </h3> </div>
+
+    @daysinmonth
+        
+        <!-- 5 rows needed for the 4 weeks and extra days -->
+        @for(int y = 1; y < 6; y++)
+        {
+            <div class="row">
+                <!-- 7 columns for the 7 days of the week -->
+                @for(int x = 1; x < 8; x++)
+                {
                     @if (currentDay > daysinmonth)
                     {
                         <div class="col-1 border border-dark calander-box calander-box-disabled"></div>
-                    } else
+                    } 
+                    else
                     {
                         <div class="col-1 border border-dark calander-box">@currentDay</div>
                         currentDay++;
                     }
-               
-                    
                 }
-            </div>
-            
-              
+            </div>   
         }
 
     </div>
