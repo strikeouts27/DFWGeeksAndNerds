@@ -1,8 +1,180 @@
 @{
     ViewData["Title"] = "Venues Page";
 }
+@section Styles {
+    <link rel="stylesheet" href="~/Venues.css" asp-append-version="true" />
+}
 
-<div class="row">
-    <div class="col-md-5"><<img src="~/images/CommonGroundGamesResized.png" alt="CommonGroundGamesInDallas" /></div>
-    <div class="col-md-7">.col-md-7</div>
+<!-- Jumbotron Section -->
+<div class="row mt-4 p-5 bg-primary text-white rounded mb-4">
+    <h1>Jumbotron Example</h1>
+    <p>The DFW Geeks and Nerds makes a point to go to different venues around the Dallas Fort Worth area to support local business and have fund doing different experiences with different nerds. These venues listed below have a fanatastic reputation with the Dallas Fort Worth Metroplex. We would love to consider any new places as well.</p>
 </div>
+
+<!-- Common Ground Games -->
+<div class="row">
+    <!-- Left Column: Carousel (takes up 8 of 12 columns on medium screens and larger) -->
+    <div class="col-md-8 mb-3">
+        <div id="CommonGroundGamesCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#CommonGroundGamesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#CommonGroundGamesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#CommonGroundGamesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100 carousel-custom-img" src="/images/CommonGroundGamesOutside.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 carousel-custom-img" src="/images/CommonGroundGames.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 carousel-custom-img" src="/images/CommonGroundGamesEvents.jpg" alt="Third slide">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#CommonGroundGamesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#CommonGroundGamesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Right Column: Independent Text (takes up 4 of 12 columns) -->
+    <div class="col-md-4">
+        <div class="p-3 border rounded bg-light h-100">
+            <h3>Common Ground Games</h3>
+            <p>
+                Common Ground Games is a reputable gaming store in the Dallas Fort Worth area. Here local nerds can discover trading card game tournaments, boardgames, minutre painting, warhammer, and there D&D has many learn to play sessions, d&d one shots, and d&d campaigns and d&d epics. Common Ground Games is also an open community that is friendly towards LGBT groups and is active in charites such as extra life.
+            </p>
+            <p>
+                <strong>Location:</strong> 1328 Inwood Rd, Dallas, TX<br />
+                <strong>Hours:</strong>
+                Monday 11AM-10PM
+                Tuesday 11AM-10PM
+                Wednesday 11AM-10PM
+                Thursday 11AM-10PM
+                Friday 11AM-12AM
+                Saturday 11AM-10PM
+                Sunday 12-6PM
+            </p>
+            <a href="https://www.boardgamesdallas.com/?srsltid=AfmBOorh-rRElqz54jPljY-WeRrEIu8VAEjVqg6niwz6QBbjhdzTW2Jb" class="btn btn-primary mt-2">Visit Website</a>
+        </div>
+    </div>
+
+</div>
+    <!-- Freeplay Arcade -->
+<div class="row">
+        <!-- Left Column: Carousel (takes up 8 of 12 columns on medium screens and larger) -->
+        <div class="col-md-8 mb-3">
+            <div id="FreePlayArcadeCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#FreePlayArcadeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#FreePlayArcadeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#FreePlayArcadeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 carousel-custom-img" src="/images/FreeplayArcadeMachines.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 carousel-custom-img" src="/images/FreePlayArcadePinball.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 carousel-custom-img" src="/images/FreeplayBar.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#FreePlayArcadeCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#FreePlayArcadeCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Right Column: Independent Text (takes up 4 of 12 columns) -->
+        <div class="col-md-4">
+            <div class="p-3 border rounded bg-light h-100">
+                <h3>Common Ground Games</h3>
+                <p>
+                    Common Ground Games is a reputable gaming store in the Dallas Fort Worth area. Here local nerds can discover trading card game tournaments, boardgames, minutre painting, warhammer, and there D&D has many learn to play sessions, d&d one shots, and d&d campaigns and d&d epics. Common Ground Games is also an open community that is friendly towards LGBT groups and is active in charites such as extra life.
+                </p>
+                <p>
+                    <strong>Location:</strong> 1328 Inwood Rd, Dallas, TX<br />
+                    <strong>Hours:</strong>
+                    Monday 11AM-10PM
+                    Tuesday 11AM-10PM
+                    Wednesday 11AM-10PM
+                    Thursday 11AM-10PM
+                    Friday 11AM-12AM
+                    Saturday 11AM-10PM
+                    Sunday 12-6PM
+                </p>
+                <a href="https://www.boardgamesdallas.com/?srsltid=AfmBOorh-rRElqz54jPljY-WeRrEIu8VAEjVqg6niwz6QBbjhdzTW2Jb" class="btn btn-primary mt-2">Visit Website</a>
+            </div>
+        </div>
+ </div>
+
+<!-- Escape Rooms -->
+<div class="row">
+    <!-- Left Column: Carousel (takes up 8 of 12 columns on medium screens and larger) -->
+    <div class="col-md-8 mb-3">
+        <div id="EscapeRoomCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#EscapeRoomCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#EscapeRoomCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#EscapeRoomCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100 carousel-custom-img" src="/images/RedDoorEscapeRoom.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 carousel-custom-img" src="/images/RedDoorLostTreasure.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 carousel-custom-img" src="/images/RedDoorVault.jpg" alt="Third slide">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#EscapeRoomCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#EscapeRoomCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Right Column: Independent Text (takes up 4 of 12 columns) -->
+    <div class="col-md-4">
+        <div class="p-3 border rounded bg-light h-100">
+            <h3>Common Ground Games</h3>
+            <p>
+                Common Ground Games is a reputable gaming store in the Dallas Fort Worth area. Here local nerds can discover trading card game tournaments, boardgames, minutre painting, warhammer, and there D&D has many learn to play sessions, d&d one shots, and d&d campaigns and d&d epics. Common Ground Games is also an open community that is friendly towards LGBT groups and is active in charites such as extra life.
+            </p>
+            <p>
+                <strong>Location:</strong> 1328 Inwood Rd, Dallas, TX<br />
+                <strong>Hours:</strong>
+                Monday 11AM-10PM
+                Tuesday 11AM-10PM
+                Wednesday 11AM-10PM
+                Thursday 11AM-10PM
+                Friday 11AM-12AM
+                Saturday 11AM-10PM
+                Sunday 12-6PM
+            </p>
+            <a href="https://www.boardgamesdallas.com/?srsltid=AfmBOorh-rRElqz54jPljY-WeRrEIu8VAEjVqg6niwz6QBbjhdzTW2Jb" class="btn btn-primary mt-2">Visit Website</a>
+        </div>
+    </div>
+
+</div>
+
+
