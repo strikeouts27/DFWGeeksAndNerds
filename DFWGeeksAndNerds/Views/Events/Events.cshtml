@@ -30,57 +30,52 @@
 
         @{
 
-            <!-- LINE THEM UP SOMEHOW -->
+           
 
             // Get the number of days in the current month
             int daysinmonth = DateTime.DaysInMonth(DateTime.Today.Year, DateTime.Today.Month);
             int currentDay = 1; 
             
+            
+
             <!--Get what the first date of the month is.  -->
             DateTime firstDayOfMonth = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
             
             <!-- Get the day of the week for the first date of the month -->
-            
-
-            DayOfWeek firstDayOfWeek = firstDayOfMonth.DayOfWeek;
-            <!-- It has to search for the first day of the month and have a starting point --> 
-            <!-- I need something that is indexed --> 
-            List<DayOfWeek> daysOfWeek = new List<DayOfWeek>()
-            {
-                DayOfWeek.Sunday,
-                DayOfWeek.Monday,
-                DayOfWeek.Tuesday,
-                DayOfWeek.Wednesday,
-                DayOfWeek.Thursday,
-                DayOfWeek.Friday,
-                DayOfWeek.Saturday
-            };
-            
-            
-            <!-- It has to know at what point in the index to start iterating from --> 
-            int startIndex = daysOfWeek.IndexOf(firstDayOfWeek);
+           
         }
     
-        <div class="row">
-        @for (int count = 0; count < daysOfWeek.Count; count++)
+    <div class="row">
+        @for (int count = 0; count <= (int)DayOfWeek.Saturday; count++)
         {
-            int i = (startIndex + count) % daysOfWeek.Count;
-            <div class="col-1 text-center fw-bold">
-                @daysOfWeek[i]
+            // int i = (startIndex + count) % daysOfWeek.Count;
+            <div class=" daysOfWeekRow calander-header col-1 text-center fw-bold">
+                @Enum.GetNames(typeof(DayOfWeek))[count]
             </div>
-        }           
-   </h3> </div>
-
-    @daysinmonth
+        }
+    </div>
         
         <!-- 5 rows needed for the 4 weeks and extra days -->
         @for(int y = 1; y < 6; y++)
         {
             <div class="row">
                 <!-- 7 columns for the 7 days of the week -->
+               
+        @{
+            <!-- We need a start date for the calander --> 
+            int startBlock = 6;
+                    int endBlock = 31;
+                    int blockCount = 0; 
+
+        }
                 @for(int x = 1; x < 8; x++)
                 {
-                    @if (currentDay > daysinmonth)
+                    @if (blockCount < startBlock)
+                    {
+                        <div class="col-1 border border-dark calander-box calander-box-disabled"></div>                   
+                        
+                    }
+                    else if (blockCount > daysinmonth)
                     {
                         <div class="col-1 border border-dark calander-box calander-box-disabled"></div>
                     } 
@@ -89,6 +84,7 @@
                         <div class="col-1 border border-dark calander-box">@currentDay</div>
                         currentDay++;
                     }
+                    blockCount ++; 
                 }
             </div>   
         }
