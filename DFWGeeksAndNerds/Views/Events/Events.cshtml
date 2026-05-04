@@ -21,29 +21,27 @@
             {
                 monthNames.Add(new DateTime(DateTime.Now.Year, i, 1).ToString("MMMM"));
             }
-            <!--I need the current month to be displayed on the page -->
-            string currentMonth = DateTime.Now.ToString("MMMM");
         }
+
+        @{
+            DateTime dtCurrentMonth = new DateTime(2026, 5, 1);
+
+
+            // Get the number of days in the current month
+            <!--I need the current month to be displayed on the page -->
+            string currentMonth = dtCurrentMonth.ToString("MMMM");
+            int daysInMonth = DateTime.DaysInMonth(dtCurrentMonth.Year, dtCurrentMonth.Month);
+            int numberOfWeeks = (int)Math.Ceiling(daysInMonth / 7.0);
+            int currentDay = 1;
+            
+            <!-- Get the day of the week for the first date of the month -->
+        }
+
         <!--Display the month name -->
         <h1>@currentMonth</h1>
         <!-- I need a row to show the days of the week --> 
 
-        @{
 
-           
-
-            // Get the number of days in the current month
-            int daysinmonth = DateTime.DaysInMonth(DateTime.Today.Year, DateTime.Today.Month);
-            int currentDay = 1; 
-            
-            
-
-            <!--Get what the first date of the month is.  -->
-            DateTime firstDayOfMonth = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
-            
-            <!-- Get the day of the week for the first date of the month -->
-           
-        }
     
     <div class="row">
         @for (int count = 0; count <= (int)DayOfWeek.Saturday; count++)
@@ -54,33 +52,39 @@
             </div>
         }
     </div>
-        
+        @{
+            // 01:25:59 
+            <!-- We need a start date for the calander -->
+            // this is the number of blocks that need to be disabled before the first day of the month.  -->
+            int startBlock = 7 - (int)dtCurrentMonth.DayOfWeek;
+            // this is the number of blocks that need to be disabled after the last day of the month.  -->
+            int endBlock = DateTime.DaysInMonth(dtCurrentMonth.Year, dtCurrentMonth.Month);
+            int blockCount = 0;
+
+        }
         <!-- 5 rows needed for the 4 weeks and extra days -->
-        @for(int y = 1; y < 6; y++)
+        @for(int y = 0; y <= numberOfWeeks; y++)
         {
             <div class="row">
                 <!-- 7 columns for the 7 days of the week -->
                
-        @{
-            <!-- We need a start date for the calander --> 
-            int startBlock = 6;
-                    int endBlock = 31;
-                    int blockCount = 0; 
 
-        }
                 @for(int x = 1; x < 8; x++)
                 {
-                    @if (blockCount < startBlock)
+                    @if (blockCount <= startBlock)
                     {
+                        // this is the number of blocks that need to be disabled before the first day of the month.  -->
                         <div class="col-1 border border-dark calander-box calander-box-disabled"></div>                   
                         
                     }
-                    else if (blockCount > daysinmonth)
+                    else if (blockCount > endBlock)
                     {
+                        // If the block count is greater than the number of days in the month we don't want to make those days accessible.
                         <div class="col-1 border border-dark calander-box calander-box-disabled"></div>
                     } 
                     else
                     {
+
                         <div class="col-1 border border-dark calander-box">@currentDay</div>
                         currentDay++;
                     }
