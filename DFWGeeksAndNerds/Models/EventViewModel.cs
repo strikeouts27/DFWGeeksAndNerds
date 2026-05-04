@@ -19,6 +19,8 @@ namespace DFWGeeksAndNerds.Models
         [Required(ErrorMessage = "Event name is required")]
         public string EventName { get; set; }
 
+        // This will show a truncated event name for the calander. 
+        public string DisplayName => EventName.Substring(0, EventName.Length > 20 ? 20 : EventName.Length);
         // GUEST COUNT 
         public int GuestCount { get; set; }
         [Required]

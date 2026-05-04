@@ -10,8 +10,9 @@
 }
 
 .calander-box {
-    width: 150px;
+    width: 175px;
     height: 175px;
+    overflow: hidden; /* Hides any text that overflows the box's fixed height */
 }
 
 .calander-box-disabled{
@@ -23,4 +24,8 @@
     width: 150px;
     height: 30px;
     margin-top: 20px; 
+}
+
+.calander-event {
+    font-size: 10px; 
 }
