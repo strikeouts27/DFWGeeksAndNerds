@@ -20,7 +20,7 @@ namespace DFWGeeksAndNerds.Models
         public string EventName { get; set; }
 
         // This will show a truncated event name for the calander. 
-        public string DisplayName => EventName.Substring(0, EventName.Length > 20 ? 20 : EventName.Length);
+        public string DisplayName => EventName.Substring(0, EventName.Length > 30 ? 30 : EventName.Length);
         // GUEST COUNT 
         public int GuestCount { get; set; }
         [Required]
@@ -71,6 +71,25 @@ namespace DFWGeeksAndNerds.Models
         */
         // the internal keyword is used to restrict access to the method within the same project
         // this is the standard way of dealing with a basic dto. 
+
+        internal static EventDTO ConvertToEventDTO(EventViewModel model)
+        {
+            return new EventDTO
+            {
+                // the left side of the equals sign is related to the properties of the event view model. 
+                // the right side of the equals sign is related to the properties of the event DTO.
+                EventHost = model.EventHost,
+                EventName = model.EventName,
+                GuestCount = model.GuestCount,
+                VenueName = model.VenueName,
+                EventDate = model.DateofEvent,
+                IsKidFriendly = model.IsKidFriendly,
+                Description = model.VenueDescription, 
+                // if the data types don't line up use the parse method to convert it to the rigth data type.
+                // DateofEvent = DateTime.Parse(dto.EventDate),
+            };
+        }
+
         internal static EventViewModel ConvertToViewModel(EventDTO dto)
         {
             return new EventViewModel

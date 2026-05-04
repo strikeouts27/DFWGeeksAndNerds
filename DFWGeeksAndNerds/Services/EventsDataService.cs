@@ -1,5 +1,7 @@
 namespace DFWGeeksAndNerds.Services; 
 using DFWGeeksAndNerds.DTOs;
+using Newtonsoft.Json;
+
 public class EventsDataService
 {
     // THis was created in Program.cs 
@@ -28,5 +30,12 @@ public class EventsDataService
         //return System.Text.Json.JsonSerializer.Deserialize<List<EventDTO>>(content);
 
         return Newtonsoft.Json.JsonConvert.DeserializeObject<List<EventDTO>>(content);
+    }
+
+    public async Task CreateEventAsync(EventDTO newEventDTO)
+    {
+        var jeventDTO = JsonConvert.SerializeObject(newEventDTO);
+        var response = await _client.PostAsync("events", new StringContent(jeventDTO, System.Text.Encoding.UTF8, "application/json"));
+        response.EnsureSuccessStatusCode();
     }
 }

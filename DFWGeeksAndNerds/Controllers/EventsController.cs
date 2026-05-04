@@ -81,6 +81,16 @@ namespace DFWGeeksAndNerds.Controllers
             return Json(events);
         }
 
+        [HttpPost]
+        public IActionResult PrevMonth() { 
+            return View(); 
+        }
+
+        [HttpPost]
+        public IActionResult NextMonth()
+        {
+            return View();
+        }
     }
         
 }

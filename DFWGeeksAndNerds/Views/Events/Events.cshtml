@@ -8,7 +8,7 @@
 @section Styles {
     <link rel="stylesheet" href="~/css/EventCalendar.css" asp-append-version="true" />
 }
-<a href="c:\users\strib\source\repos\dfwgeeksandnerds\dfwgeeksandnerds\views\events\calander.cshtml">c:\users\strib\source\repos\dfwgeeksandnerds\dfwgeeksandnerds\views\events\calander.cshtml</a>
+
 <div>
     <div class="container"> 
         @{
@@ -30,15 +30,23 @@
             // Get the number of days in the current month
             <!--I need the current month to be displayed on the page -->
             string currentMonth = dtCurrentMonth.ToString("MMMM");
+            string currentYear = dtCurrentMonth.ToString("yyyy");
             int daysInMonth = DateTime.DaysInMonth(dtCurrentMonth.Year, dtCurrentMonth.Month);
             int weeksInMonth = (int)Math.Ceiling(daysInMonth / 7.0);
             int currentDay = 1;
             
-            <!-- Get the day of the week for the first date of the month -->
+            
         }
 
         <!--Display the month name -->
-        <h1>@currentMonth</h1>
+        <div class="row">
+            <h1 class="col-4">@currentMonth @currentYear</h1>
+            <form method="post">
+                <button asp-page-asp-page-handler="PrevMonth" class="col-2 btn btn-secondary mx-3">prev</button>
+                <button asp-page-asp-page-handler="NextMonth" class="col-2 btn btn-primary mx-3">next</button>
+            </form>
+        </div>
+        
         <!-- I need a row to show the days of the week --> 
 
 
@@ -93,7 +101,7 @@
                             // show that event in the calander box.
                             <div class="col-1 border border-dark calander-box">
                                <div>
-                                   @currentDay
+                                   @currentDay 
                                </div>
 
                                @foreach (var eventItem in eventsForDay)
