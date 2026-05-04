@@ -31,7 +31,7 @@
             <!--I need the current month to be displayed on the page -->
             string currentMonth = dtCurrentMonth.ToString("MMMM");
             int daysInMonth = DateTime.DaysInMonth(dtCurrentMonth.Year, dtCurrentMonth.Month);
-            int numberOfWeeks = (int)Math.Ceiling(daysInMonth / 7.0);
+            int weeksInMonth = (int)Math.Ceiling(daysInMonth / 7.0);
             int currentDay = 1;
             
             <!-- Get the day of the week for the first date of the month -->
@@ -58,12 +58,12 @@
             // this is the number of blocks that need to be disabled before the first day of the month.  -->
             int startBlock = 7 - (int)dtCurrentMonth.DayOfWeek;
             // this is the number of blocks that need to be disabled after the last day of the month.  -->
-            int endBlock = DateTime.DaysInMonth(dtCurrentMonth.Year, dtCurrentMonth.Month);
+            int endBlock = DateTime.DaysInMonth(dtCurrentMonth.Year, dtCurrentMonth.Month) - 1;
             int blockCount = 0;
 
         }
         <!-- 5 rows needed for the 4 weeks and extra days -->
-        @for(int y = 0; y <= numberOfWeeks; y++)
+        @for(int y = 0; y <= weeksInMonth; y++)
         {
             <div class="row">
                 <!-- 7 columns for the 7 days of the week -->
@@ -71,21 +71,44 @@
 
                 @for(int x = 1; x < 8; x++)
                 {
+                    
                     @if (blockCount <= startBlock)
                     {
                         // this is the number of blocks that need to be disabled before the first day of the month.  -->
                         <div class="col-1 border border-dark calander-box calander-box-disabled"></div>                   
                         
                     }
-                    else if (blockCount > endBlock)
+                    else if (blockCount > endBlock + startBlock)
                     {
                         // If the block count is greater than the number of days in the month we don't want to make those days accessible.
                         <div class="col-1 border border-dark calander-box calander-box-disabled"></div>
                     } 
                     else
                     {
+                        // this is a filter where we are looking at the events and seeing if there are any events that match the current day and month. If there are we want to display the event name in the calander box.
+                        var eventsForDay = Model.Where(e => e.DateofEvent.Day == currentDay && e.DateofEvent.Month == dtCurrentMonth.Month).ToList();
+                       // if the events for the day is not empty in its explanation and there is at least on event....
+                        if (eventsForDay != null && eventsForDay.Count > 0)
+                        {
+                            // show that event in the calander box.
+                            <div class="col-1 border border-dark calander-box">
+                               <div>
+                                   @currentDay
+                               </div>
 
-                        <div class="col-1 border border-dark calander-box">@currentDay</div>
+                               @foreach (var eventItem in eventsForDay)
+                               {
+                                   <div class="calander-event-indicator">@eventItem.DisplayName</div>
+                               }
+                            </div> <!-- Close the calendar box here -->
+                        }
+                        // If there are no events...
+                        else
+                        {
+                            <div class="col-1 border border-dark calander-box">
+                                <div>@currentDay</div>
+                            </div>
+                        }
                         currentDay++;
                     }
                     blockCount ++; 
