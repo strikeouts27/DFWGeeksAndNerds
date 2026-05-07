@@ -47,6 +47,7 @@ namespace DFWGeeksAndNerds.Models
         [Display(Name = "Event Date")]
         [DataType(DataType.Date)]
         public DateTime DateofEvent { get; set; }
+
         /*
         public DateTime now = new DateTime();  // Current date with the time set to midnight (00:00:00)
         public string[] days { get; set; } =
