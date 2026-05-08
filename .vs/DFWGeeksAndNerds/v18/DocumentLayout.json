@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|c:\\users\\strib\\source\\repos\\dfwgeeksandnerds\\dfwgeeksandnerds\\models\\eventviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\models\\eventviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|c:\\users\\strib\\source\\repos\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\events\\events.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\events\\events.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|c:\\users\\strib\\source\\repos\\dfwgeeksandnerds\\dfwgeeksandnerds\\models\\calanderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\models\\calanderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|c:\\users\\strib\\source\\repos\\dfwgeeksandnerds\\dfwgeeksandnerds\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -13,20 +21,46 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 3949,
+          "DockedWidth": 2386,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EventViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Models\\EventViewModel.cs",
-              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Models\\EventViewModel.cs",
-              "ToolTip": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Models\\EventViewModel.cs",
-              "RelativeToolTip": "DFWGeeksAndNerds\\Models\\EventViewModel.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAwwFYAAAA2AAAAAAAAAA==",
+              "Title": "Events.cshtml",
+              "DocumentMoniker": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Events\\Events.cshtml",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Events\\Events.cshtml",
+              "ToolTip": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Events\\Events.cshtml*",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Events\\Events.cshtml*",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAC0AAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-08T00:25:11.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CalanderViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Models\\CalanderViewModel.cs",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Models\\CalanderViewModel.cs",
+              "ToolTip": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Models\\CalanderViewModel.cs",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Models\\CalanderViewModel.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAuwEAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T05:19:17.494Z",
+              "WhenOpened": "2026-05-08T00:08:41.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EventsController.cs",
+              "DocumentMoniker": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Controllers\\EventsController.cs",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Controllers\\EventsController.cs",
+              "ToolTip": "C:\\Users\\strib\\source\\repos\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Controllers\\EventsController.cs",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Controllers\\EventsController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAA8wEAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T23:38:40.97Z",
               "EditorCaption": ""
             }
           ]
