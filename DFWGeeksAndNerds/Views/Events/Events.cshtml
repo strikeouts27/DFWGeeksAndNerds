@@ -1,5 +1,5 @@
 ﻿@using DFWGeeksAndNerds.Models;
-@model List<EventViewModel>;
+@model CalanderViewModel;
 
 @{
     ViewData["Title"] = "Events Page";
@@ -11,7 +11,7 @@
 
 <div>
     <div class="container"> 
-        @{
+        @* @{
             <!-- TODO CREATE MONTHS-->
             string monthName = DateTime.Now.ToString("MMMM");
             <!-- To get all of the months in a list --> 
@@ -21,10 +21,10 @@
             {
                 monthNames.Add(new DateTime(DateTime.Now.Year, i, 1).ToString("MMMM"));
             }
-        }
+        } *@
 
         @{
-            DateTime dtCurrentMonth = new DateTime(2026, 5, 1);
+            DateTime dtCurrentMonth = new DateTime(Model.Year, Model.Month, 1);
 
 
             // Get the number of days in the current month
@@ -41,9 +41,9 @@
         <!--Display the month name -->
         <div class="row">
             <h1 class="col-4">@currentMonth @currentYear</h1>
-            <form method="post">
-                <button asp-page-asp-page-handler="PrevMonth" class="col-2 btn btn-secondary mx-3">prev</button>
-                <button asp-page-asp-page-handler="NextMonth" class="col-2 btn btn-primary mx-3">next</button>
+            <form model="@Model" method="post">
+                <button type="submit" formaction="@Url.Action("NextMonth", "Events")" class ="col-2 btn btn-secondary mx-3">prev</button>
+                <button type="submit" formaction="@Url.Action("NextMonth", "Events", Model)" class="col-2 btn btn-primary mx-3">next</button>
             </form>
         </div>
         
@@ -94,7 +94,7 @@
                     else
                     {
                         // this is a filter where we are looking at the events and seeing if there are any events that match the current day and month. If there are we want to display the event name in the calander box.
-                        var eventsForDay = Model.Where(e => e.DateofEvent.Day == currentDay && e.DateofEvent.Month == dtCurrentMonth.Month).ToList();
+                        var eventsForDay = Model.CurrentEvents(currentDay);
                        // if the events for the day is not empty in its explanation and there is at least on event....
                         if (eventsForDay != null && eventsForDay.Count > 0)
                         {
