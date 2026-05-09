@@ -2,7 +2,7 @@
     ViewData["Title"] = "Venues Page";
 }
 @section Styles {
-    <link rel="stylesheet" href="~/Venues.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Venues.css" asp-append-version="true" />
 }
 
 <!-- Jumbotron Section -->
@@ -11,19 +11,7 @@
     <p>The DFW Geeks and Nerds makes a point to go to different venues around the Dallas Fort Worth area to support local business and have fund doing different experiences with different nerds. These venues listed below have a fanatastic reputation with the Dallas Fort Worth Metroplex. We would love to consider any new places as well.</p>
 </div>
 
-@{
-    ViewData["Title"] = "Venues Page";
-}
-@section Styles {
-    <link rel="stylesheet" href="~/css/" asp-append-version="true" />
-}
-
-<!-- Jumbotron Section -->
-<div class="row mt-4 p-5 bg-primary text-white rounded mb-4">
-    <h1>Jumbotron Example</h1>
-    <p>The DFW Geeks and Nerds makes a point to go to different venues around the Dallas Fort Worth area to support local business and have fund doing different experiences with different nerds. These venues listed below have a fanatastic reputation with the Dallas Fort Worth Metroplex. We would love to consider any new places as well.</p>
-</div>
-
+<!--Common Ground Games Carousel -->
 <div class="container">
     <div class="row">
         <!-- This column takes up exactly 8 of the 12 spaces on medium screens and larger -->
@@ -31,7 +19,44 @@
             
             <!-- YOUR CAROUSEL CODE GOES HERE -->
             <div id="CommonGroundGamesCarousel" class="carousel slide" data-bs-ride="carousel">
-                <!-- Carousel inner, items, etc. -->
+                <div class="carousel-indicators">
+                    <!-- Make sure the data-bs-target matches the ID -->
+                    <button type="button" data-bs-target="#CommonGroundGamesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#CommonGroundGamesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#CommonGroundGamesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="~/images/CommonGroundGamesOutside.jpg" class="d-block w-100" alt="CommonGroundGamesOutside">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/CommonGroundGamesInventory.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/CommonGroundGamesTournament.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#CommonGroundGamesCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#CommonGroundGamesCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
 
         </div>
@@ -43,6 +68,7 @@
     </div>
 </div>
 
+<!-- Red Door Escape Room Code -->
 <div class="container">
     <div class="row">
         <!-- This column takes up exactly 8 of the 12 spaces on medium screens and larger -->
