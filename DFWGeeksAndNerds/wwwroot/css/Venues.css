@@ -1,0 +1,19 @@
+﻿/*Venues.css */
+
+.JumbotronContainer {
+    display: flex;
+    background-color: DodgerBlue;
+}
+
+
+.CommonGroundGamesCarousel {
+    border: 5px solid black;
+}
+
+/* Force all carousel images to a standard 16:9 Widescreen ratio */
+.carousel-inner img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover; /* Crops the image instead of stretching it */
+    object-position: center; /* Keeps the focal point in the middle */
+}

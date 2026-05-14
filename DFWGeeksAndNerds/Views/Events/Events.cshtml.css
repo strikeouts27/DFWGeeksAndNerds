@@ -12,7 +12,7 @@
 .calander-box {
     width: 175px;
     height: 175px;
-    overflow: hidden; /* Hides any text that overflows the box's fixed height */
+    font-size: 10px;
 }
 
 .calander-box-disabled{

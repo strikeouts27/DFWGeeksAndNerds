@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Views\Venues\Venues.css" />
+    <Compile Remove="Controllers\CalendarController.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +32,10 @@
 
   <ItemGroup>
     <Folder Include="Views\Venues\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\Venues.css" />
   </ItemGroup>
 
 </Project>

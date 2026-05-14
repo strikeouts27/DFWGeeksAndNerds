@@ -1,5 +1,6 @@
 ﻿@using DFWGeeksAndNerds.Models;
-@model List<EventViewModel>;
+@using Newtonsoft.Json
+@model CalanderViewModel;
 
 @{
     ViewData["Title"] = "Events Page";
@@ -8,10 +9,10 @@
 @section Styles {
     <link rel="stylesheet" href="~/css/EventCalendar.css" asp-append-version="true" />
 }
-<a href="c:\users\strib\source\repos\dfwgeeksandnerds\dfwgeeksandnerds\views\events\calander.cshtml">c:\users\strib\source\repos\dfwgeeksandnerds\dfwgeeksandnerds\views\events\calander.cshtml</a>
+
 <div>
     <div class="container"> 
-        @{
+        @* @{
             <!-- TODO CREATE MONTHS-->
             string monthName = DateTime.Now.ToString("MMMM");
             <!-- To get all of the months in a list --> 
@@ -21,24 +22,33 @@
             {
                 monthNames.Add(new DateTime(DateTime.Now.Year, i, 1).ToString("MMMM"));
             }
-        }
+        } *@
 
         @{
-            DateTime dtCurrentMonth = new DateTime(2026, 5, 1);
+            DateTime dtCurrentMonth = new DateTime(Model.Year, Model.Month, 1);
 
 
             // Get the number of days in the current month
             <!--I need the current month to be displayed on the page -->
             string currentMonth = dtCurrentMonth.ToString("MMMM");
+            string currentYear = dtCurrentMonth.ToString("yyyy");
             int daysInMonth = DateTime.DaysInMonth(dtCurrentMonth.Year, dtCurrentMonth.Month);
             int weeksInMonth = (int)Math.Ceiling(daysInMonth / 7.0);
             int currentDay = 1;
             
-            <!-- Get the day of the week for the first date of the month -->
+            
         }
 
         <!--Display the month name -->
-        <h1>@currentMonth</h1>
+        <div class="row">
+            <h1 class="col-4">@currentMonth @currentYear</h1>
+            <form model="@Model" method="post">
+            <input type="hidden" name="modelJson" value="@JsonConvert.SerializeObject(Model)"/> 
+                <button type="submit" formaction="@Url.Action("NextMonth", "Events")" class ="col-2 btn btn-secondary mx-3">prev</button>
+                <button type="submit" formaction="@Url.Action("NextMonth", "Events")" class="col-2 btn btn-primary mx-3">next</button>
+            </form>
+        </div>
+        
         <!-- I need a row to show the days of the week --> 
 
 
@@ -86,14 +96,14 @@
                     else
                     {
                         // this is a filter where we are looking at the events and seeing if there are any events that match the current day and month. If there are we want to display the event name in the calander box.
-                        var eventsForDay = Model.Where(e => e.DateofEvent.Day == currentDay && e.DateofEvent.Month == dtCurrentMonth.Month).ToList();
+                        var eventsForDay = Model.CurrentEvents(currentDay);
                        // if the events for the day is not empty in its explanation and there is at least on event....
                         if (eventsForDay != null && eventsForDay.Count > 0)
                         {
                             // show that event in the calander box.
                             <div class="col-1 border border-dark calander-box">
                                <div>
-                                   @currentDay
+                                   @currentDay 
                                </div>
 
                                @foreach (var eventItem in eventsForDay)

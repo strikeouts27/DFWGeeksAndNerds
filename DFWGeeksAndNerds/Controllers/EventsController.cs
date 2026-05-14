@@ -1,6 +1,8 @@
 ﻿using DFWGeeksAndNerds.Models;
 using DFWGeeksAndNerds.Services;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Collections.ObjectModel;
 
 namespace DFWGeeksAndNerds.Controllers
 {
@@ -26,7 +28,9 @@ namespace DFWGeeksAndNerds.Controllers
         {
             var events = await _eventDataService.GetEventsAsync();
             var model = EventViewModel.ConvertToViewModelList(events);
-            return View(model);
+            var calander = new CalanderViewModel();
+            calander.Events = new List<EventViewModel>(model);
+            return View(calander);
             //return View();
         }
 
@@ -55,18 +59,18 @@ namespace DFWGeeksAndNerds.Controllers
             return View();
         } 
 
-        public IActionResult Calander(int? year, int? month)
-        {
-            var today = DateTime.Today;
+        //public IActionResult Calander(int? year, int? month)
+        //{
+        //    var today = DateTime.Today;
 
-            var model = new CalendarViewModel
-            {
-                Year = year ?? today.Year,
-                Month = month ?? today.Month
-            };
+        //    var model = new CalendarViewModel
+        //    {
+        //        Year = year ?? today.Year,
+        //        Month = month ?? today.Month
+        //    };
 
-            return View(model);
-        }
+        //    return View(model);
+        //}
 
         [HttpGet]
         public IActionResult GetEvents()
@@ -81,6 +85,18 @@ namespace DFWGeeksAndNerds.Controllers
             return Json(events);
         }
 
+        [HttpPost]
+        public IActionResult PrevMonth() { 
+            return View(); 
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> NextMonth(string modelJson)
+        {
+            var calander = JsonConvert.DeserializeObject<CalanderViewModel>(modelJson);
+            await calander.MoveNext(); 
+            return View("Events", calander);
+        }
     }
         
 }
