@@ -1,6 +1,7 @@
 ﻿using DFWGeeksAndNerds.Models;
 using DFWGeeksAndNerds.Services;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 
 namespace DFWGeeksAndNerds.Controllers
@@ -90,9 +91,11 @@ namespace DFWGeeksAndNerds.Controllers
         }
 
         [HttpPost]
-        public IActionResult NextMonth(CalanderViewModel calander)
+        public async Task<IActionResult> NextMonth(string modelJson)
         {
-            return View();
+            var calander = JsonConvert.DeserializeObject<CalanderViewModel>(modelJson);
+            await calander.MoveNext(); 
+            return View("Events", calander);
         }
     }
         

@@ -1,4 +1,5 @@
 ﻿@using DFWGeeksAndNerds.Models;
+@using Newtonsoft.Json
 @model CalanderViewModel;
 
 @{
@@ -42,8 +43,9 @@
         <div class="row">
             <h1 class="col-4">@currentMonth @currentYear</h1>
             <form model="@Model" method="post">
+            <input type="hidden" name="modelJson" value="@JsonConvert.SerializeObject(Model)"/> 
                 <button type="submit" formaction="@Url.Action("NextMonth", "Events")" class ="col-2 btn btn-secondary mx-3">prev</button>
-                <button type="submit" formaction="@Url.Action("NextMonth", "Events", Model)" class="col-2 btn btn-primary mx-3">next</button>
+                <button type="submit" formaction="@Url.Action("NextMonth", "Events")" class="col-2 btn btn-primary mx-3">next</button>
             </form>
         </div>
         
