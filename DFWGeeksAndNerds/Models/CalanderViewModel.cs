@@ -9,9 +9,10 @@ namespace DFWGeeksAndNerds.Models
     {
         // Calander Requirements
         // We don't want outside influence on what can control the month and year. 
-        public int Month { get; private set; }
+        // we had private on the set methods to control outside influence but the json deserailizer that we were using cannot utilize private fields. 
+        public int Month { get; set; }
         
-        public int Year { get; private set; }
+        public int Year { get; set; }
 
         // The why behind this line of code is that we want an event container that is read only
         // and the reason why is because we are only displaying events on the events page. 

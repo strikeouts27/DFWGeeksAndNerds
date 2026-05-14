@@ -86,13 +86,16 @@ namespace DFWGeeksAndNerds.Controllers
         }
 
         [HttpPost]
-        public IActionResult PrevMonth() { 
-            return View(); 
+        public async Task<IActionResult> PrevMonth(string modelJson) {
+            var calander = JsonConvert.DeserializeObject<CalanderViewModel>(modelJson);
+            await calander.MovePrevious(); 
+            return View("Events", calander); 
         }
 
         [HttpPost]
         public async Task<IActionResult> NextMonth(string modelJson)
         {
+            // JsonConvert.DeserializeObject will not work with private set attributes 
             var calander = JsonConvert.DeserializeObject<CalanderViewModel>(modelJson);
             await calander.MoveNext(); 
             return View("Events", calander);

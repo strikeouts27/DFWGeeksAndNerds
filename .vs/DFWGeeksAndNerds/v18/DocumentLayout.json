@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "F:\\DFWGeeksAndNerds\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|f:\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\venues\\venues.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\venues\\venues.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|f:\\dfwgeeksandnerds\\dfwgeeksandnerds\\views\\events\\events.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\views\\events\\events.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|f:\\dfwgeeksandnerds\\dfwgeeksandnerds\\wwwroot\\css\\venues.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\wwwroot\\css\\venues.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|f:\\dfwgeeksandnerds\\dfwgeeksandnerds\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,38 +31,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Venues.cshtml",
-              "DocumentMoniker": "F:\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Venues\\Venues.cshtml",
-              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Venues\\Venues.cshtml",
-              "ToolTip": "F:\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Venues\\Venues.cshtml",
-              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Venues\\Venues.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAC4AAAA1AAAAAAAAAA==",
+              "Title": "Events.cshtml",
+              "DocumentMoniker": "F:\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Events\\Events.cshtml",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Views\\Events\\Events.cshtml",
+              "ToolTip": "F:\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Views\\Events\\Events.cshtml",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Views\\Events\\Events.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwC4AAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-09T20:13:49.115Z",
+              "WhenOpened": "2026-05-14T23:51:15.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EventsController.cs",
+              "DocumentMoniker": "F:\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Controllers\\EventsController.cs",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Controllers\\EventsController.cs",
+              "ToolTip": "F:\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Controllers\\EventsController.cs",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Controllers\\EventsController.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAuwFgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T23:37:34.863Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 1693,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 3088,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Venues.css",
-              "DocumentMoniker": "F:\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\wwwroot\\css\\Venues.css",
-              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\wwwroot\\css\\Venues.css",
-              "ToolTip": "F:\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\wwwroot\\css\\Venues.css",
-              "RelativeToolTip": "DFWGeeksAndNerds\\wwwroot\\css\\Venues.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-05-09T21:05:03.796Z",
-              "EditorCaption": ""
             }
           ]
         }
