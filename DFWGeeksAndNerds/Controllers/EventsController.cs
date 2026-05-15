@@ -3,6 +3,7 @@ using DFWGeeksAndNerds.Services;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace DFWGeeksAndNerds.Controllers
 {
@@ -35,22 +36,24 @@ namespace DFWGeeksAndNerds.Controllers
         }
 
         // create a post method for the form
-        [HttpPost]
-        public IActionResult AddEvent(EventViewModel eventViewModel)
+       
+        public IActionResult AddEvent()
         {
-            return RedirectToAction("Events");
+            return View(new EventViewModel()); 
         }
 
+
         [HttpPost]
-        public IActionResult Create(EventViewModel model)
+        public async Task<IActionResult> Create(EventViewModel model)
         {
             if (ModelState.IsValid)
             {
                 // 1. Save to Database here
                 // 2. Redirect to a "Success" or "Index" page
-                return RedirectToAction("Success"); 
+                var eventDTO = EventViewModel.ConvertToEventDTO(model);
+                await _eventDataService.CreateEventAsync(eventDTO);
             }
-            return View(model);
+            return RedirectToAction("Events");
         }
 
         // New action for the success page

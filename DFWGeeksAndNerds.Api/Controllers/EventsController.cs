@@ -134,7 +134,7 @@ namespace DFWGeeksAndNerds.Api.Controllers
             // target all information that you want to update and overwrite it with the new information that is being sent in the api message.
             eventToUpdate.EventName = updatedEvent.EventName;
             eventToUpdate.EventHost = updatedEvent.EventHost;
-            eventToUpdate.RSVPCount = updatedEvent.RSVPCount;
+            eventToUpdate.GuestCount = updatedEvent.GuestCount;
             eventToUpdate.VenueName = updatedEvent.VenueName;
             eventToUpdate.EventDate = updatedEvent.EventDate;
             eventToUpdate.IsKidFriendly = updatedEvent.IsKidFriendly;
