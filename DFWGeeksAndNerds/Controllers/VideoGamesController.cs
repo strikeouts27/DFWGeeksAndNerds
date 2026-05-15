@@ -10,6 +10,26 @@ namespace DFWGeeksAndNerds.Controllers
         {
             return View();
         }
+
+        public IActionResult Nintendo()
+        {
+            return View();
+        }
+
+        public IActionResult Xbox()
+        {
+            return View();
+        }
+
+        public IActionResult PlayStation()
+        {
+            return View();
+        }
+
+        public IActionResult STEAM()
+        {
+            return View();
+        }
     }
 
 }

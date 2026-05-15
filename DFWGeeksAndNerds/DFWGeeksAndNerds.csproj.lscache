@@ -471,7 +471,12 @@ Views/
   _Layout.cshtml
   _ValidationScriptsPartial.cshtml
  Venues/Venues.cshtml
- VideoGames/VideoGames.cshtml
+ VideoGames/
+  Nintendo.cshtml
+  PlayStation.cshtml
+  STEAM.cshtml
+  VideoGames.cshtml
+  Xbox.cshtml
  _ViewImports.cshtml
  _ViewStart.cshtml
 
@@ -493,6 +498,11 @@ Views/
   _Layout.cshtml
   _ValidationScriptsPartial.cshtml
  Venues/Venues.cshtml
- VideoGames/VideoGames.cshtml
+ VideoGames/
+  Nintendo.cshtml
+  PlayStation.cshtml
+  STEAM.cshtml
+  VideoGames.cshtml
+  Xbox.cshtml
  _ViewImports.cshtml
  _ViewStart.cshtml
