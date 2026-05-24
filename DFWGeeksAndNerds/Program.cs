@@ -9,7 +9,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient("GeeksAndNerdsAPI", client =>
 {
     
-    client.BaseAddress = new Uri("http://localhost:5003/");
+    client.BaseAddress = new Uri("http://localhost:8000/");
     client.DefaultRequestHeaders.Add("Accept", "application/json");
 });
 

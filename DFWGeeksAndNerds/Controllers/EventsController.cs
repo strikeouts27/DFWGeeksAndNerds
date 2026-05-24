@@ -25,12 +25,22 @@ namespace DFWGeeksAndNerds.Controllers
             var model = new EventViewModel();
             return View(model);
         }
+
+        // attribute tags specify on what type of HTTP Methods Type that the following method will be called on. GET requests for GET requests. POST for POST and so on. 
+        [HttpGet]
         public async Task<IActionResult> Events()
         {
+            // quite a few things happen on this line of code. 
+            // What happens: Controller -> Services -> API Controller -> Database -> API COntroller -> Services -> Controller -> View 
             var events = await _eventDataService.GetEventsAsync();
+            // by now the view is getting data back. 
+            // view models are data for the front end. 
+            // we must unpack the dto and make it in a format that the event view model can understand. 
+            // this refences 
             var model = EventViewModel.ConvertToViewModelList(events);
             var calander = new CalanderViewModel();
             calander.Events = new List<EventViewModel>(model);
+            // the finished product returns to the view. 
             return View(calander);
             //return View();
         }
@@ -50,6 +60,7 @@ namespace DFWGeeksAndNerds.Controllers
             {
                 // 1. Save to Database here
                 // 2. Redirect to a "Success" or "Index" page
+                // conversion 
                 var eventDTO = EventViewModel.ConvertToEventDTO(model);
                 await _eventDataService.CreateEventAsync(eventDTO);
             }

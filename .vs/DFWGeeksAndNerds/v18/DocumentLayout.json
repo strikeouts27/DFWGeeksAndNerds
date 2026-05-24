@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "F:\\DFWGeeksAndNerds\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E61146CC-CC8F-4954-80CB-9D4EAAA4D666}|DFWGeeksAndNerds.Shared\\DFWGeeksAndNerds.Shared.csproj|f:\\dfwgeeksandnerds\\dfwgeeksandnerds.shared\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E61146CC-CC8F-4954-80CB-9D4EAAA4D666}|DFWGeeksAndNerds.Shared\\DFWGeeksAndNerds.Shared.csproj|solutionrelative:dfwgeeksandnerds.shared\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|f:\\dfwgeeksandnerds\\dfwgeeksandnerds\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED45B343-BA3B-45CE-AC65-C416AA51FBB4}|DFWGeeksAndNerds.Api\\DFWGeeksAndNerds.Api.csproj|f:\\dfwgeeksandnerds\\dfwgeeksandnerds.api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED45B343-BA3B-45CE-AC65-C416AA51FBB4}|DFWGeeksAndNerds.Api\\DFWGeeksAndNerds.Api.csproj|solutionrelative:dfwgeeksandnerds.api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -13,7 +17,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 2068,
+          "DockedWidth": 4289,
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -23,25 +27,34 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "F:\\DFWGeeksAndNerds\\DFWGeeksAndNerds.Shared\\Class1.cs",
-              "RelativeDocumentMoniker": "DFWGeeksAndNerds.Shared\\Class1.cs",
-              "ToolTip": "F:\\DFWGeeksAndNerds\\DFWGeeksAndNerds.Shared\\Class1.cs",
-              "RelativeToolTip": "DFWGeeksAndNerds.Shared\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "EventsController.cs",
+              "DocumentMoniker": "F:\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Controllers\\EventsController.cs",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\Controllers\\EventsController.cs",
+              "ToolTip": "F:\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\Controllers\\EventsController.cs",
+              "RelativeToolTip": "DFWGeeksAndNerds\\Controllers\\EventsController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAiwDwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T17:57:24.712Z",
+              "WhenOpened": "2026-05-23T21:22:52.61Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 1270,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 197,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EventsController.cs",
+              "DocumentMoniker": "F:\\DFWGeeksAndNerds\\DFWGeeksAndNerds.Api\\Controllers\\EventsController.cs",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds.Api\\Controllers\\EventsController.cs",
+              "ToolTip": "F:\\DFWGeeksAndNerds\\DFWGeeksAndNerds.Api\\Controllers\\EventsController.cs",
+              "RelativeToolTip": "DFWGeeksAndNerds.Api\\Controllers\\EventsController.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAgwGMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T21:59:30.869Z",
+              "EditorCaption": ""
             }
           ]
         }
