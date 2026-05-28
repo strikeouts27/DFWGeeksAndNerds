@@ -62,8 +62,10 @@ namespace DFWGeeksAndNerds.Controllers
                 // 2. Redirect to a "Success" or "Index" page
                 // conversion 
                 var eventDTO = EventViewModel.ConvertToEventDTO(model);
+                // at the end of this method call the post request has returned with a status code of success or thrown an error. 
                 await _eventDataService.CreateEventAsync(eventDTO);
             }
+            // this actually is a clever method to activate the get request for this page and show the new event created. 
             return RedirectToAction("Events");
         }
 
