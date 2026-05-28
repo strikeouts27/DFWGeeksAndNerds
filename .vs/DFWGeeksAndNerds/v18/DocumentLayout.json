@@ -1,19 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "F:\\DFWGeeksAndNerds\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|f:\\dfwgeeksandnerds\\dfwgeeksandnerds\\dfwgeeksandnerds.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{3E99A3BB-3AB2-7BBF-BD27-0951C446B139}|DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj|solutionrelative:dfwgeeksandnerds\\dfwgeeksandnerds.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 509,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 623,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DFWGeeksAndNerds",
+              "DocumentMoniker": "F:\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj",
+              "RelativeDocumentMoniker": "DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj",
+              "ToolTip": "F:\\DFWGeeksAndNerds\\DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj",
+              "RelativeToolTip": "DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-28T22:45:30.196Z",
+              "EditorCaption": ""
             }
           ]
         }

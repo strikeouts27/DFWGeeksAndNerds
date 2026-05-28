@@ -1,7 +1,10 @@
 namespace DFWGeeksAndNerds.Services; 
 using DFWGeeksAndNerds.DTOs;
 using Newtonsoft.Json;
-
+/*
+ For this project to work you must right click on the solutions file and selecting properties. You need to tell visual studio to launch both the main project and the api.  
+ 
+ */
 public class EventsDataService
 {
     // a variable that stores this built in ASP.NET object of HttpClient for reference use because you can't just pull things out of thin air you have to specify parts of code sometimes. . 
