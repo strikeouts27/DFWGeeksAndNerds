@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using DFWGeeksAndNerds.Api.Models;
 using DFWGeeksAndNerds.Api.Providers;
 
-// TO RUN THIS PROGRAM USE http://localhost:5003/swagger/index.html 
+// TO RUN THIS PROGRAM USE http://localhost:8000/swagger/index.html 
 // use the dotnet build and dotnet run commands in the terminal to run the program. 
 
 namespace DFWGeeksAndNerds.Api.Controllers

@@ -3,6 +3,7 @@ using DFWGeeksAndNerds.Services;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace DFWGeeksAndNerds.Controllers
 {
@@ -24,33 +25,48 @@ namespace DFWGeeksAndNerds.Controllers
             var model = new EventViewModel();
             return View(model);
         }
+
+        // attribute tags specify on what type of HTTP Methods Type that the following method will be called on. GET requests for GET requests. POST for POST and so on. 
+        [HttpGet]
         public async Task<IActionResult> Events()
         {
+            // quite a few things happen on this line of code. 
+            // What happens: Controller -> Services -> API Controller -> Database -> API COntroller -> Services -> Controller -> View 
             var events = await _eventDataService.GetEventsAsync();
+            // by now the view is getting data back. 
+            // view models are data for the front end. 
+            // we must unpack the dto and make it in a format that the event view model can understand. 
+            // this refences 
             var model = EventViewModel.ConvertToViewModelList(events);
             var calander = new CalanderViewModel();
             calander.Events = new List<EventViewModel>(model);
+            // the finished product returns to the view. 
             return View(calander);
             //return View();
         }
 
         // create a post method for the form
-        [HttpPost]
-        public IActionResult AddEvent(EventViewModel eventViewModel)
+       
+        public IActionResult AddEvent()
         {
-            return RedirectToAction("Events");
+            return View(new EventViewModel()); 
         }
 
+
         [HttpPost]
-        public IActionResult Create(EventViewModel model)
+        public async Task<IActionResult> Create(EventViewModel model)
         {
             if (ModelState.IsValid)
             {
                 // 1. Save to Database here
                 // 2. Redirect to a "Success" or "Index" page
-                return RedirectToAction("Success"); 
+                // conversion 
+                var eventDTO = EventViewModel.ConvertToEventDTO(model);
+                // at the end of this method call the post request has returned with a status code of success or thrown an error. 
+                await _eventDataService.CreateEventAsync(eventDTO);
             }
-            return View(model);
+            // this actually is a clever method to activate the get request for this page and show the new event created. 
+            return RedirectToAction("Events");
         }
 
         // New action for the success page
@@ -86,13 +102,16 @@ namespace DFWGeeksAndNerds.Controllers
         }
 
         [HttpPost]
-        public IActionResult PrevMonth() { 
-            return View(); 
+        public async Task<IActionResult> PrevMonth(string modelJson) {
+            var calander = JsonConvert.DeserializeObject<CalanderViewModel>(modelJson);
+            await calander.MovePrevious(); 
+            return View("Events", calander); 
         }
 
         [HttpPost]
         public async Task<IActionResult> NextMonth(string modelJson)
         {
+            // JsonConvert.DeserializeObject will not work with private set attributes 
             var calander = JsonConvert.DeserializeObject<CalanderViewModel>(modelJson);
             await calander.MoveNext(); 
             return View("Events", calander);

@@ -10,12 +10,13 @@ using Microsoft.EntityFrameworkCore;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 // DATABASE NEEDS TO BE TURNED ON IN ORDER TO RUN ANY OF THESE METHODS. 
-// TO RUN THIS PROGRAM USE http://localhost:5003/swagger/index.html 
+// TO RUN THIS PROGRAM USE http://localhost:8000/swagger/index.html 
 // use the dotnet build and dotnet run commands in the terminal to run the program. 
 
 
 namespace DFWGeeksAndNerds.Api.Controllers
 {
+    // This Route attribute tag will parse the url and remove the word controller and than whatever is left of the name of the controller is how the controller will be accessed. The controllers own url so to speak. 
     [Route("[controller]")]
     [ApiController]
     public class EventsController : ControllerBase
@@ -92,10 +93,11 @@ namespace DFWGeeksAndNerds.Api.Controllers
         // GET: api/<EventsController>
         // IEnumerable is a collection of storage containers.
         // interface (contract of standards) it represents types of collections. 
+        // You might say this is our way of doing a search query in a database. 
         [HttpGet]
         public IEnumerable<EventDTO> Get()
         {
-
+            // the api controller grabbing the data from the database to be sent back via json 
             return _dbContext.Events.ToList();
         }
 
@@ -104,6 +106,7 @@ namespace DFWGeeksAndNerds.Api.Controllers
         // newEvent is the name of the variable that will store this Event message data. 
         // The model that we made for Event is now the datatype of the storage container. 
         // FromBody is telling the API method to grab the data from the api body of the api message that is being sent. 
+        // FromBody is a declaration that this post method meets these standards defined in the FromBody attribute. 
         // DATABASE NEEDS TO BE TURNED ON IN ORDER TO RUN ANY OF THESE METHODS. 
         [HttpPost]
         public async Task Post([FromBody] EventDTO newEvent)
@@ -134,7 +137,7 @@ namespace DFWGeeksAndNerds.Api.Controllers
             // target all information that you want to update and overwrite it with the new information that is being sent in the api message.
             eventToUpdate.EventName = updatedEvent.EventName;
             eventToUpdate.EventHost = updatedEvent.EventHost;
-            eventToUpdate.RSVPCount = updatedEvent.RSVPCount;
+            eventToUpdate.GuestCount = updatedEvent.GuestCount;
             eventToUpdate.VenueName = updatedEvent.VenueName;
             eventToUpdate.EventDate = updatedEvent.EventDate;
             eventToUpdate.IsKidFriendly = updatedEvent.IsKidFriendly;

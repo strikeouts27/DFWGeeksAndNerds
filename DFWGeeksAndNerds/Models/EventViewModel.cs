@@ -35,14 +35,14 @@ namespace DFWGeeksAndNerds.Models
         public double EventCost { get; set; }
 
         // TECH REQUIREMENTS
-        public string TechRequirements { get; set; }
+        public string? TechRequirements { get; set; }
         [Display(Name = "Is this event kid-friendly?")]
 
         // KID FRIENDLY
         public bool IsKidFriendly { get; set; }
         [DataType(DataType.MultilineText)]
-        public string VenueDescription { get; set; }
-        public string NewEvent { get; set; }
+        public string? VenueDescription { get; set; }
+        
         [Required]
         [Display(Name = "Event Date")]
         [DataType(DataType.Date)]

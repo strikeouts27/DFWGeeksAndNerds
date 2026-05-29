@@ -5,7 +5,7 @@
         public int Id { get; set; } 
         public required string EventName { get; set; }
         public required string EventHost { get; set; }
-        public required int RSVPCount { get; set; }
+        public required int GuestCount { get; set; }
         public required string VenueName { get; set; }
         public required DateTime EventDate { get; set; }
         public required bool IsKidFriendly { get; set; }
@@ -17,7 +17,7 @@
         public int Id { get; set; }
         public required string EventName { get; set; }
         public required string EventHost { get; set; }
-        public required int RSVPCount { get; set; }
+        public required int GuestCount { get; set; }
         public required string VenueName { get; set; }
         public required DateTime EventDate { get; set; }
         public required bool IsKidFriendly { get; set; }
