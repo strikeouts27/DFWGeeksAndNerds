@@ -65,6 +65,18 @@ public class EventsDataService
         // this is the checker that will see if the transmission was succesful. if not, an error exception will display. 
         response.EnsureSuccessStatusCode();
 
-        // there is no return keyword here but there is an implicit return. 
+        // there is no return keyword here but there is an implicit return.
     }
+
+    // googled documentation for different ways to implement HTTP Delete, found the best one for the project based on needs (usuing a query string) 
+    // the package that we are using to transmit information from the service to the api would be a DTO. 
+    // // THIS METHOD IS HTTP DELETE REQUEST TO THE URL OF THE API. HERES THE ADDRESS AND FIRE THE INFORMATION. 
+    // If the transmission is succesful it will transmit 200 or a success code. If not, an error message will happen. 
+    // googled http delete async. got this link -> the documentation told me what parameters it needed to do the job. 
+    [HttpDelete]
+    public async Task DeleteEventAsync(EventDTO deleteEventDTO) 
+    {
+        var response = await _client.DeleteAsync($"events/{deleteEventDTO.ID}");
+    } 
+
 }
