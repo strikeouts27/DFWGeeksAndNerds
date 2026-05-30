@@ -3,7 +3,7 @@ using DFWGeeksAndNerds.DTOs;
 using Newtonsoft.Json;
 /*
  For this project to work you must right click on the solutions file and selecting properties. You need to tell visual studio to launch both the main project and the api.  
- 
+You can google what people are using for different things. 
  */
 public class EventsDataService
 {
@@ -66,5 +66,27 @@ public class EventsDataService
         response.EnsureSuccessStatusCode();
 
         // there is no return keyword here but there is an implicit return. 
+    }
+
+    // await -> I need to have to this information before we can do anything else. 
+    public async Task UpdateEventAsync(EventDTO eventDTO)
+    {
+        var jeventDTO = JsonConvert.SerializeObject(eventDTO);
+
+        // await means this step of the process must be fully complete before the next code can be run.
+        // if the await lock was not on this code than the code could continue running and not verfiy with the response.EnsureSccuessStatusCode(); 
+        // PutAsync will fire off code on its own. So if the await lock was not put on there than the code would fire off and the ensure status code check would not run. 
+        // look at await as if it were in a view of multiple methods working at once NOT from a standard way of viewing the method from top to bottom. look at the different methods are running as once.  
+        // await should be used as a timing lock because asp.net will follow your instructions exactly and will run checks asap or instantley and the task that you give it takes more time than instant gratifiaction. 
+        // await makes certain that the task is given sufficent time to do what it needs to do before other code like ensure success status code does. 
+        // there is also a multi request viewpoint for these things. for example if i wanted to run it non async and update 50 records than 50 records would open individually and process at two seconds each. 
+        // but if i have async than 50 records can be opened at once and the operation can run all 50 times at the same time for just 2 seconds saving an increidble amount of time. 
+
+        var response = await _client.PutAsync("events", new StringContent(jeventDTO, System.Text.Encoding.UTF8, "application/json"));
+
+        return; // this is return; is not normally input. but its just to help me see that nothing is returned. 
+        // if this code comes back with an error code than tell me there is an error. if it comes back and says the response code is 200 or some other success code than say so. 
+        // response.EnsureSuccessStatusCode();
+        // services simply finishes everything that its going to do and other parts of asp.net continue to run services is finshed working. 
     }
 }

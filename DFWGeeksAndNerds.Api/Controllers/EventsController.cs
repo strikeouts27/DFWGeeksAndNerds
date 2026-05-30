@@ -18,6 +18,7 @@ namespace DFWGeeksAndNerds.Api.Controllers
 {
     // This Route attribute tag will parse the url and remove the word controller and than whatever is left of the name of the controller is how the controller will be accessed. The controllers own url so to speak. 
     [Route("[controller]")]
+    // This next attribute specifies that this controller will be used for api calls.
     [ApiController]
     public class EventsController : ControllerBase
     {
@@ -123,11 +124,20 @@ namespace DFWGeeksAndNerds.Api.Controllers
 
         [HttpPut("id")]
         // Task after the method name is similar to the void keybord. 
-        // if there is brackets <> on the Task keyword would return something. If no brackets there is no return. (tasks are specalized and will be addressed later.) pending more details
+        // if there are angle brackets <> on the Task keyword would return something. If no brackets there is no return. (tasks are specalized and will be addressed later.) pending more details
+        // angle brackets <> are return types. 
+        // Tasks are data types that work with async programming. async functions primarly deal with moving async functions forward. in other words multi tasking. 
+        // async -> doing multiple things at the same time.  
+        // await you can do this other stuff around me.
+
         // the naming convention of the parameter is important it needs to be a verb that describes what the method is targeting and updating.
-        // DTO or POCO only contians data. no functions. 
+        // DTO or POCO only contians data. 
         // FirstOrDefault is a method that will return the first item in the collection that matches the condition. If no items match the condition, it will return the default value for the type (null for reference types). If it is null we won't make any changes to the database the record does not exisit. 
         // DATABASE NEEDS TO BE TURNED ON IN ORDER TO RUN ANY OF THESE METHODS. 
+        // streaming is when information is coming in from a user or information source and streaming is a container that holds the information and upon completetion of recieving all incoming data will transmit everything it recorded in the exact order it got it. 
+        // FromBody is a shortcut for taking the package, reading the body and putting everything into a variable. It is a packaging like function that grabs the content, takes in any stream of informaiton and than deserialize the content and than stores that compelted work as a variable. 
+        // we know that put request is targeting information. 
+        // get the content, stream it, and serialize it, and put it into a variable. 
         public async Task Update(int id, [FromBody] EventDTO updatedEvent)
         {
             var eventToUpdate = _dbContext.Events.FirstOrDefault(p => p.Id.Equals(id));
@@ -135,6 +145,12 @@ namespace DFWGeeksAndNerds.Api.Controllers
                 return;
 
             // target all information that you want to update and overwrite it with the new information that is being sent in the api message.
+            // keep in mind that this information is stored in columns. 
+            // we are specifying what the put request will target once it finds the right record.
+            // it may be best practice to have the database pulled up so you can see what columns exist.
+            // keep in mind that if you create a new column in the database you have to come to asp.net and say so for all methods involving the new column. 
+            // checklist dto, view and the testing phase. 
+
             eventToUpdate.EventName = updatedEvent.EventName;
             eventToUpdate.EventHost = updatedEvent.EventHost;
             eventToUpdate.GuestCount = updatedEvent.GuestCount;
@@ -144,8 +160,13 @@ namespace DFWGeeksAndNerds.Api.Controllers
             eventToUpdate.Description = updatedEvent.Description;
             _dbContext.Events.Update(eventToUpdate);
             _dbContext.SaveChanges();
+            return; // no information is returned. is implicitly returnted but we added return; to explicitly say it. 
+
         
         }
+        // alternative to from body 
+        // (int id, HttpRequest request) 
+        // var updatedEvent = Deserialize(InputFormatter(response.content.body)); 
 
         // DELETE api/<EventsController>/5
         // DATABASE NEEDS TO BE TURNED ON IN ORDER TO RUN ANY OF THESE METHODS. 

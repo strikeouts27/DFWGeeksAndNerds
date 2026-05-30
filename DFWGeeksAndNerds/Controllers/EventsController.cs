@@ -73,7 +73,25 @@ namespace DFWGeeksAndNerds.Controllers
         public IActionResult Success()
         {
             return View();
-        } 
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Put(EventViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var eventDTO = EventViewModel.ConvertToEventDTO(model);
+                // await will finish all work. 
+                await _eventDataService.UpdateEventAsync(eventDTO); 
+
+            }
+            // temp fix where we tell asp.net controller to use the events page with the new updated redisplayed information. 
+            // but getting a separate page that shows what specifically chanaged would be a more pro way to do it. 
+            // TO DO a form to update the event has not yet been created so the put requests are useless until the user has access to the update page. 
+            return RedirectToAction("Events"); 
+        }
+
+        
 
         //public IActionResult Calander(int? year, int? month)
         //{
