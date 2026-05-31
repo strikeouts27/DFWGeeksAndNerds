@@ -1,3 +1,8 @@
+/* 
+    Non compiled items like images are stored here.
+    css files do not get compiled. the browser knows how to read css. 
+
+*/
 h1:focus {
     outline: none;
 }

@@ -3,12 +3,14 @@
     "Name": "New Profile",
     "Projects": [
       {
-        "Path": "DFWGeeksAndNerds\\DFWGeeksAndNerds.csproj",
-        "Action": "Start"
+        "Path": "DFWGeeksAndNerds.Api\\DFWGeeksAndNerds.Api.csproj",
+        "Action": "StartWithoutDebugging",
+        "DebugTarget": "http"
       },
       {
-        "Path": "DFWGeeksAndNerds.Api\\DFWGeeksAndNerds.Api.csproj",
-        "Action": "StartWithoutDebugging"
+        "Path": "DFWGeeksAndNerds.Web\\DFWGeeksAndNerds.Web.csproj",
+        "Action": "Start",
+        "DebugTarget": "http"
       }
     ]
   }
