@@ -64,3 +64,5 @@ password.txt
 
 # I input this backup file on my gitignore because its bad practice to upload it. 
 *.bak
+
+.appsettings.json

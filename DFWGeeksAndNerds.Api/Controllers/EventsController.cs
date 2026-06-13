@@ -107,8 +107,8 @@ namespace DFWGeeksAndNerds.Api.Controllers
         // newEvent is the name of the variable that will store this Event message data. 
         // The model that we made for Event is now the datatype of the storage container. 
         // FromBody is telling the API method to grab the data from the api body of the api message that is being sent. 
-        // FromBody is a declaration that this post method meets these standards defined in the FromBody attribute. 
-        // DATABASE NEEDS TO BE TURNED ON IN ORDER TO RUN ANY OF THESE METHODS. 
+        // FromBody is a declaration that this post method meets these standards a FromBody attribute must have. 
+        // THE DATABASE NEEDS TO BE TURNED ON IN ORDER TO RUN ANY OF THESE METHODS. 
         [HttpPost]
         public async Task Post([FromBody] EventDTO newEvent)
         {

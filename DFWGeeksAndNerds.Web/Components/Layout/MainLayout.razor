@@ -1,6 +1,36 @@
-﻿@inherits LayoutComponentBase
+﻿@using BlazorBootstrap
+@inherits LayoutComponentBase
 
 <!-- this is where the content of your page will come from. -->
+<navbar class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+    <a class="navbar-brand" href="/">DFW Geeks and Nerds</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+        <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item">
+                <NavLink class="nav-link text-white" href="/" Match="NavLinkMatch.All">Home</NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink class="nav-link text-white" href="/anime">Anime</NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink class="nav-link text-white" href="/events">Events</NavLink>
+            </li>
+            <li class="nav-item">
+              <NavLink class="nav-link text-white" href="/news">News</NavLink> 
+            </li>
+            <li class="nav-item">
+                <NavLink class="nav-link text-white" href="/videogames">VideoGames</NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink class="nav-link text-white" href="/venues">Venues</NavLink>
+            </li>
+
+        </ul>
+    </div>
+</navbar>
 @Body
 
 <div id="blazor-error-ui" data-nosnippet>

@@ -104,7 +104,7 @@ namespace DFWGeeksAndNerds.Models
                 DateofEvent = dto.EventDate,
                 IsKidFriendly = dto.IsKidFriendly,
                 VenueDescription = dto.Description,
-                // if the data types don't line up use the parse method to convert it to the rigth data type.
+                // if the data types don't line up use the parse method to convert it to the right data type.
                 // DateofEvent = DateTime.Parse(dto.EventDate),
             };
         }
@@ -119,7 +119,7 @@ namespace DFWGeeksAndNerds.Models
             var viewModels = new List<EventViewModel>();
             foreach (var dto in dtos)
             {
-                viewModels.Add(ConvertToViewModel(dto));
+                viewModels.Add(ConvertToViewModael(dto));
             }
             return viewModels;
         }
