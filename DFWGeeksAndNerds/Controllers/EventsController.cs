@@ -38,7 +38,7 @@ namespace DFWGeeksAndNerds.Controllers
             // we must unpack the dto and make it in a format that the event view model can understand. 
             // this refences 
             var model = EventViewModel.ConvertToViewModelList(events);
-            var calander = new CalanderViewModel();
+            var calander = new CalendarViewModel();
             calander.Events = new List<EventViewModel>(model);
             // the finished product returns to the view. 
             return View(calander);
@@ -93,7 +93,7 @@ namespace DFWGeeksAndNerds.Controllers
 
         
 
-        //public IActionResult Calander(int? year, int? month)
+        //public IActionResult Calendar(int? year, int? month)
         //{
         //    var today = DateTime.Today;
 
@@ -121,7 +121,7 @@ namespace DFWGeeksAndNerds.Controllers
 
         [HttpPost]
         public async Task<IActionResult> PrevMonth(string modelJson) {
-            var calander = JsonConvert.DeserializeObject<CalanderViewModel>(modelJson);
+            var calander = JsonConvert.DeserializeObject<CalendarViewModel>(modelJson);
             await calander.MovePrevious(); 
             return View("Events", calander); 
         }
@@ -130,7 +130,7 @@ namespace DFWGeeksAndNerds.Controllers
         public async Task<IActionResult> NextMonth(string modelJson)
         {
             // JsonConvert.DeserializeObject will not work with private set attributes 
-            var calander = JsonConvert.DeserializeObject<CalanderViewModel>(modelJson);
+            var calander = JsonConvert.DeserializeObject<CalendarViewModel>(modelJson);
             await calander.MoveNext(); 
             return View("Events", calander);
         }

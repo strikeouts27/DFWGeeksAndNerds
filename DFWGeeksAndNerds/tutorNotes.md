@@ -5,7 +5,7 @@ Regarding AI
 
 See how it did it, than do it on your own. 
 
-Calander stuff would need to be connected to back end. 
+Calendar stuff would need to be connected to back end.
 Plug in. 
 
 Setting up the database MVC 
@@ -47,7 +47,7 @@ Google These Terms later
 graphql api 
 functional api's 
 
-I need to render from the razor page a calander that I can use with an api. 
+I need to render from the razor page a calendar that I can use with an api.
 
 Explain how to build a simple monthly calendar in an ASP.NET MVC Razor view.
 

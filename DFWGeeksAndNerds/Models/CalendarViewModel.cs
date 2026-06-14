@@ -1,16 +1,77 @@
-//using System;
+﻿using Microsoft.EntityFrameworkCore.ValueGeneration.Internal;
+using Microsoft.VisualBasic;
+using System.Collections.Immutable;
+using System.Collections.ObjectModel;
 
-//namespace DFWGeeksAndNerds.Models
-//{
-//    public class CalendarViewModel
-//    {
-//        public int Year { get; set; }
-//        public int Month { get; set; }
+namespace DFWGeeksAndNerds.Models
+{
+    public class CalendarViewModel
+    {
+        // Calendar Requirements
+        // We don't want outside influence on what can control the month and year. 
+        // we had private on the set methods to control outside influence but the json deserailizer that we were using cannot utilize private fields. 
+        public int Month { get; set; }
+        
+        public int Year { get; set; }
 
-//        public DateTime CurrentDate => new DateTime(Year, Month, 1);
-//        public int DaysInMonth => DateTime.DaysInMonth(Year, Month);
+        // The why behind this line of code is that we want an event container that is read only
+        // and the reason why is because we are only displaying events on the events page. 
+        public List<EventViewModel> Events { get; set; }
 
-//        // This tells us what day of the week (0=Sunday, 6=Saturday) the 1st falls on
-//        public DayOfWeek FirstDayOfMonth => CurrentDate.DayOfWeek;
-//    }
-//}
+        public ReadOnlyCollection<EventViewModel> CurrentEvents(int currentDay) => 
+            Events.Where(e => e.DateofEvent.Day == currentDay && e.DateofEvent.Month == Month && e.DateofEvent.Year==Year)
+                  .ToList()
+                  .AsReadOnly();
+
+        public string DisplayMonth
+        {
+            get {
+                return new DateTime(Year, Month, 1).ToString("MMMM");
+            }
+        }
+
+        public string DisplayYear => Year.ToString();
+
+
+        public async Task MoveNext ()
+        {
+            if (Month == 12)
+            {
+                Month = 1;
+                Year++;
+            }
+            else
+            {
+                Month++;
+            }
+        }
+
+        public async Task MovePrevious ()
+        {
+            if (Month == 1)
+            {
+                Month = 12;
+                Year--; 
+            }
+            else
+            {
+                Month--; 
+            }
+        }
+
+        // constructors MUST have the same names as its class. 
+        // initalize to todays month and year by default. 
+        public CalendarViewModel()
+        {
+            Month = DateTime.Today.Month;
+            Year = DateTime.Today.Year; 
+        }
+
+        // take in a month and year so we can set it. 
+        public CalendarViewModel(int year, int month) {
+
+            Month = month;
+            Year = year; 
+        }
+    }
+}

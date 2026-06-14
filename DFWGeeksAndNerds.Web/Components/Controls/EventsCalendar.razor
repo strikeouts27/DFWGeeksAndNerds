@@ -1,21 +1,53 @@
-﻿@using DFWGeeksAndNerds.Models;
-@using Newtonsoft.Json
-@model CalendarViewModel;
+﻿@using DFWGeeksAndNerds.Web.ViewModels;
 
-@{
-    ViewData["Title"] = "Events Page";
-}
 
-@section Styles {
-    <link rel="stylesheet" href="~/css/EventCalendar.css" asp-append-version="true" />
-}
+<style>
+
+    .calendar-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .calendar-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed; /* Ensures all columns are identical in width */
+    }
+
+        .calendar-table th {
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #454d55;
+        }
+
+        .calendar-table td {
+            border: 1px solid #dee2e6;
+            height: 120px;
+            vertical-align: top;
+            padding: 8px;
+            background-color: #fff;
+        }
+
+        .calendar-table .empty-cell {
+            background-color: #f8f9fa; /* Grays out non-month days */
+        }
+
+    .day-number {
+        font-weight: bold;
+        float: right;
+        color: #495057;
+    }
+
+</style>
 
 <div>
-    <div class="container"> 
+    <div class="container">
         @* @{
             <!-- TODO CREATE MONTHS-->
             string monthName = DateTime.Now.ToString("MMMM");
-            <!-- To get all of the months in a list --> 
+            <!-- To get all of the months in a list -->
             List<string> monthNames = new List<string>();
             <!-- Loop through the months and add them to the list -->
             for (int i = 1; i <= 12; i++)
@@ -25,7 +57,7 @@
         } *@
 
         @{
-            DateTime dtCurrentMonth = new DateTime(Model.Year, Model.Month, 1);
+            DateTime dtCurrentMonth = new DateTime(2026, 6, 1) ;
 
 
             // Get the number of days in the current month
@@ -35,35 +67,36 @@
             int daysInMonth = DateTime.DaysInMonth(dtCurrentMonth.Year, dtCurrentMonth.Month);
             int weeksInMonth = (int)Math.Ceiling(daysInMonth / 7.0);
             int currentDay = 1;
-            
+
             
         }
 
         <!--Display the month name -->
+        <!-- 
         <div class="row">
             <h1 class="col-4">@currentMonth @currentYear</h1>
             <form model="@Model" method="post">
-            <input type="hidden" name="modelJson" value="@JsonConvert.SerializeObject(Model)"/> 
+                <input type="hidden" name="modelJson" value="@JsonConvert.SerializeObject(Model)" />
                 <button type="submit" formaction="@Url.Action("PrevMonth", "Events")" class="col-2 btn btn-secondary mx-3">prev</button>
                 <button type="submit" formaction="@Url.Action("NextMonth", "Events")" class="col-2 btn btn-primary mx-3">next</button>
             </form>
         </div>
-        
-        <!-- I need a row to show the days of the week --> 
+        -->
+        <!-- I need a row to show the days of the week -->
 
 
     
-    <div class="row">
-        @for (int count = 0; count <= (int)DayOfWeek.Saturday; count++)
-        {
-            // int i = (startIndex + count) % daysOfWeek.Count;
-            <div class=" daysOfWeekRow calendar-header col-1 text-center fw-bold">
-                @Enum.GetNames(typeof(DayOfWeek))[count]
-            </div>
-        }
-    </div>
+        <div class="row">
+            @for (int count = 0; count <= (int)DayOfWeek.Saturday; count++)
+            {
+                // int i = (startIndex + count) % daysOfWeek.Count;
+                <div class=" daysOfWeekRow calendar-header col-1 text-center fw-bold">
+                    @Enum.GetNames(typeof(DayOfWeek))[count]
+                </div>
+            }
+        </div>
         @{
-            // 01:25:59 
+            // 01:25:59
             <!-- We need a start date for the calendar -->
             // this is the number of blocks that need to be disabled before the first day of the month.  -->
             int startBlock = 7 - (int)dtCurrentMonth.DayOfWeek;
@@ -73,43 +106,42 @@
 
         }
         <!-- 5 rows needed for the 4 weeks and extra days -->
-        @for(int y = 0; y <= weeksInMonth; y++)
+        @for (int y = 0; y <= weeksInMonth; y++)
         {
             <div class="row">
                 <!-- 7 columns for the 7 days of the week -->
-               
-
-                @for(int x = 1; x < 8; x++)
+                @for (int x = 1; x < 8; x++)
                 {
-                    
+
                     @if (blockCount <= startBlock)
                     {
                         // this is the number of blocks that need to be disabled before the first day of the month.  -->
-                        <div class="col-1 border border-dark calendar-box calendar-box-disabled"></div>                   
-                        
+                        <div class="col-1 border border-dark calendar-box calendar-box-disabled"></div>
+
                     }
                     else if (blockCount > endBlock + startBlock)
                     {
                         // If the block count is greater than the number of days in the month we don't want to make those days accessible.
                         <div class="col-1 border border-dark calendar-box calendar-box-disabled"></div>
-                    } 
+                    }
                     else
                     {
                         // this is a filter where we are looking at the events and seeing if there are any events that match the current day and month. If there are we want to display the event name in the calendar box.
-                        var eventsForDay = Model.CurrentEvents(currentDay);
-                       // if the events for the day is not empty in its explanation and there is at least on event....
-                        if (eventsForDay != null && eventsForDay.Count > 0)
+                        var eventsForDay = 30; //Model.CurrentEvents(currentDay);
+                        // if the events for the day is not empty in its explanation and there is at least on event....
+                        if (eventsForDay != null && 0 > 0)
                         {
                             // show that event in the calendar box.
                             <div class="col-1 border border-dark calendar-box">
-                               <div>
-                                   @currentDay 
-                               </div>
+                                <div>
+                                    @currentDay
+                                </div>
 
-                               @foreach (var eventItem in eventsForDay)
-                               {
-                                   <div class="calendar-event-indicator">@eventItem.DisplayName</div>
-                               }
+                                <!-- NEEDANATSIGNforeach (var eventItem in eventsForDay) 
+                                {
+                                    <div class="calendar-event-indicator">NEEDANATSIGNeventItem.DisplayName</div>
+                                }
+                                -->
                             </div> <!-- Close the calendar box here -->
                         }
                         // If there are no events...
@@ -121,10 +153,13 @@
                         }
                         currentDay++;
                     }
-                    blockCount ++; 
+                    blockCount++;
                 }
-            </div>   
+            </div>
         }
 
     </div>
 </div>
+
+
+

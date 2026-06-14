@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
-using DFWGeeksAndNerds.DTOs;
+﻿using DFWGeeksAndNerds.Shared.DTOs;
+using Microsoft.AspNetCore.Mvc.Diagnostics;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.ComponentModel.DataAnnotations;
 
-namespace DFWGeeksAndNerds.Models
+namespace DFWGeeksAndNerds.Web.Models
 {
     public class EventViewModel
     {
@@ -42,7 +43,7 @@ namespace DFWGeeksAndNerds.Models
         public bool IsKidFriendly { get; set; }
         [DataType(DataType.MultilineText)]
         public string? VenueDescription { get; set; }
-        
+
         [Required]
         [Display(Name = "Event Date")]
         [DataType(DataType.Date)]
@@ -85,7 +86,7 @@ namespace DFWGeeksAndNerds.Models
                 VenueName = model.VenueName,
                 EventDate = model.DateofEvent,
                 IsKidFriendly = model.IsKidFriendly,
-                Description = model.VenueDescription, 
+                Description = model.VenueDescription,
                 // if the data types don't line up use the parse method to convert it to the rigth data type.
                 // DateofEvent = DateTime.Parse(dto.EventDate),
             };
@@ -119,7 +120,7 @@ namespace DFWGeeksAndNerds.Models
             var viewModels = new List<EventViewModel>();
             foreach (var dto in dtos)
             {
-                viewModels.Add(ConvertToViewModael(dto));
+                viewModels.Add(ConvertToViewModel(dto));
             }
             return viewModels;
         }
