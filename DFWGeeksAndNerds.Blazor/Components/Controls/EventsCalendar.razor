@@ -1,43 +1,30 @@
 ﻿@using DFWGeeksAndNerds.Web.ViewModels;
 
-
 <style>
-
-    .calendar-container {
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    .calendar-table {
+    .carousel-inner .carousel-item img {
+        height: 600px;
         width: 100%;
-        border-collapse: collapse;
-        table-layout: fixed; /* Ensures all columns are identical in width */
+        object-fit: cover;
     }
 
-        .calendar-table th {
-            background-color: #343a40;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            border: 1px solid #454d55;
-        }
+    .calendar-box {
+        width: 175px;
+        height: 175px;
+        font-size: 10px;
+    }
 
-        .calendar-table td {
-            border: 1px solid #dee2e6;
-            height: 120px;
-            vertical-align: top;
-            padding: 8px;
-            background-color: #fff;
-        }
+    .calendar-box-disabled {
+        background-color: darkgray;
+    }
 
-        .calendar-table .empty-cell {
-            background-color: #f8f9fa; /* Grays out non-month days */
-        }
+    .calendar-header {
+        width: 150px;
+        height: 30px;
+        margin-top: 20px;
+    }
 
-    .day-number {
-        font-weight: bold;
-        float: right;
-        color: #495057;
+    .calendar-event {
+        font-size: 10px;
     }
 
 </style>

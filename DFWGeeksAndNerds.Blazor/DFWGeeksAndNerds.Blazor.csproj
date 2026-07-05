@@ -23,4 +23,9 @@
     <ProjectReference Include="..\DFWGeeksAndNerds.Shared\DFWGeeksAndNerds.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\Activites\" />
+    <Folder Include="wwwroot\images\Home\" />
+  </ItemGroup>
+
 </Project>

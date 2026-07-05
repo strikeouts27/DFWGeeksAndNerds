@@ -1,0 +1,19 @@
+.home-carousel-container ::deep .carousel,
+.home-carousel-container ::deep .carousel-inner,
+.home-carousel-container ::deep .carousel-item {
+    height: 500px !important;
+    width: 100% !important;
+    overflow: hidden;
+}
+
+.carousel-image {
+    width: 100% !important;
+    height: 500px !important;
+    object-fit: cover !important;
+}
+
+.home-carousel-container ::deep .carousel-item img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+}

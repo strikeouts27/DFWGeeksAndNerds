@@ -4,7 +4,7 @@ VisualStudioVersion = 18.4.11605.240
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DFWGeeksAndNerds.Api", "DFWGeeksAndNerds.Api\DFWGeeksAndNerds.Api.csproj", "{ED45B343-BA3B-45CE-AC65-C416AA51FBB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DFWGeeksAndNerds.Web", "DFWGeeksAndNerds.Web\DFWGeeksAndNerds.Web.csproj", "{E3517B0D-8D7C-4FD2-9756-4D6BAC03DEA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DFWGeeksAndNerds.Blazor", "DFWGeeksAndNerds.Blazor\DFWGeeksAndNerds.Blazor.csproj", "{E3517B0D-8D7C-4FD2-9756-4D6BAC03DEA7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DFWGeeksAndNerds.Shared", "DFWGeeksAndNerds.Shared\DFWGeeksAndNerds.Shared.csproj", "{E61146CC-CC8F-4954-80CB-9D4EAAA4D666}"
 EndProject

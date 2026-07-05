@@ -8,7 +8,7 @@
         "DebugTarget": "http"
       },
       {
-        "Path": "DFWGeeksAndNerds.Web\\DFWGeeksAndNerds.Web.csproj",
+        "Path": "DFWGeeksAndNerds.Web\\DFWGeeksAndNerds.Blazor.csproj",
         "Action": "Start",
         "DebugTarget": "http"
       }

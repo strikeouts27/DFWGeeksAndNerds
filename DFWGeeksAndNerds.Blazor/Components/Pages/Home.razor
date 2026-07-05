@@ -1,0 +1,43 @@
+﻿@using BlazorBootstrap
+
+@page "/"
+
+@rendermode InteractiveServer
+
+<PageTitle>Home</PageTitle>
+
+<!-- moved styles to component-scoped Home.razor.css to avoid inline styles -->
+<style>
+
+	.carousel-image {
+		width: 100% !important;
+		height: 750px !important;
+		object-fit: cover !important;
+	}
+
+	.home-carousel-container ::deep .carousel-item img {
+		height: 1000px;
+		width: 100%;
+		object-fit: cover;
+	}
+
+</style><div class="home-carousel-container">
+	<Carousel ShowIndicators="true" Autoplay="CarouselAutoPlay.StartOnPageLoad" Interval="3000" Class="px-2">
+		<CarouselItem Active="true">
+			<Image Src="/images/Venues/BishopCidercade_596.jpg" class="carousel-image"/>
+		</CarouselItem>
+		<CarouselItem>
+			<Image Src="/images/Venues/freeplay.jpg" class="carousel-image"/>
+		</CarouselItem>
+		<CarouselItem>
+			<Image Src="/images/Venues/MadnessGamesAndComics.jpg" class="carousel-image" />
+		</CarouselItem>
+		<CarouselItem>
+			<Image Src="/images/Venues/DallasMuseumOfArt.jpg" class="carousel-image"></Image>
+		</CarouselItem>
+		<CarouselItem>
+			<Image Src="/images/Venues/Pinstack.jpg" class="carousel-image"></Image>
+		</CarouselItem>
+	</Carousel>
+</div>
+

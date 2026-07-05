@@ -1,7 +1,6 @@
 using DFWGeeksAndNerds.Shared.Services;
-using DFWGeeksAndNerds.Web.Components;
-
-namespace DFWGeeksAndNerds.Web
+using DFWGeeksAndNerds.Blazor.Components;
+namespace DFWGeeksAndNerds.Blazor
 {
     public class Program
     {
