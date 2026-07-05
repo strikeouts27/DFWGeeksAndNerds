@@ -1,4 +1,7 @@
-﻿@using DFWGeeksAndNerds.Web.ViewModels;
+﻿@using DFWGeeksAndNerds.Shared.DTOs
+@using DFWGeeksAndNerds.Web.ViewModels;
+<!--Inject services with atinject service servicename -->
+@inject IHttpClientFactory ClientFactory; 
 
 <style>
     .carousel-inner .carousel-item img {
@@ -82,6 +85,7 @@
                 </div>
             }
         </div>
+
         @{
             // 01:25:59
             <!-- We need a start date for the calendar -->
@@ -114,9 +118,9 @@
                     else
                     {
                         // this is a filter where we are looking at the events and seeing if there are any events that match the current day and month. If there are we want to display the event name in the calendar box.
-                        var eventsForDay = 30; //Model.CurrentEvents(currentDay);
+                        //var eventsForDay = await GetEvents(); //Model.CurrentEvents(currentDay);
                         // if the events for the day is not empty in its explanation and there is at least on event....
-                        if (eventsForDay != null && 0 > 0)
+                        if (eventsForDay != null && eventsForDay.Count() > 0)
                         {
                             // show that event in the calendar box.
                             <div class="col-1 border border-dark calendar-box">
@@ -124,11 +128,10 @@
                                     @currentDay
                                 </div>
 
-                                <!-- NEEDANATSIGNforeach (var eventItem in eventsForDay) 
+                                @foreach (var eventItem in eventsForDay) 
                                 {
-                                    <div class="calendar-event-indicator">NEEDANATSIGNeventItem.DisplayName</div>
+                                    <div class="calendar-event-indicator">@eventItem.EventName</div>
                                 }
-                                -->
                             </div> <!-- Close the calendar box here -->
                         }
                         // If there are no events...
@@ -148,5 +151,38 @@
     </div>
 </div>
 
+@code{
+    HttpClient client;
+    List<EventDTO> eventsForDay = new List<EventDTO>();
 
+    // utlize this code once for inital launching of the webpage and reloads. button click actions, will not trigger this code to run. 
+    protected override async Task OnInitializedAsync()
+    {
+
+        //client = ClientFactory.CreateClient("DFWGeeksAndNerdsAPI");
+
+        eventsForDay = await GetEvents();
+
+        await base.OnInitializedAsync();
+    }
+
+    private async Task<List<EventDTO>> GetEvents()
+    {
+        // return await client.GetFromJsonAsync<EventDTO>("/events");    
+        return new List<EventDTO>()
+        {
+            new EventDTO()
+            {
+                 Description="Test Event 1",
+                 ID=1,
+                 EventName="Test Event 1",
+                 EventHost="Test Host 1",
+                 GuestCount=10,
+                 VenueName="Test Venue 1",
+                 EventDate=DateTime.Parse("2026-06-01"),
+                 IsKidFriendly = true,
+            }
+        };
+    }
+}
 
