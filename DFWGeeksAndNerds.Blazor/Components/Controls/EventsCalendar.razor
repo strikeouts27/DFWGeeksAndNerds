@@ -1,7 +1,9 @@
 ﻿@using DFWGeeksAndNerds.Shared.DTOs
 @using DFWGeeksAndNerds.Web.ViewModels;
+@using DFWGeeksAndNerds.Shared.Services; 
 <!--Inject services with atinject service servicename -->
-@inject IHttpClientFactory ClientFactory; 
+@* @inject IHttpClientFactory ClientFactory;  *@
+@inject EventsDataService EventsDataService; 
 
 <style>
     .carousel-inner .carousel-item img {
@@ -64,7 +66,7 @@
         }
 
         <!--Display the month name -->
-        - 
+        
         <div class="row">
             <h1 class="col-4">@currentMonth @currentYear</h1>
             <!--
@@ -75,7 +77,7 @@
             </form>
             --> 
         </div>
-        -->
+       
         <!-- I need a row to show the days of the week -->
 
 
@@ -146,7 +148,11 @@
                                 @foreach (var eventItem in eventsForDay)
                                 {
 
-                                    if (eventItem.EventDate.Day == currentDay)
+                                    if (
+                                        eventItem.EventDate.Year == dtSelectedDate.Year &&
+                                        eventItem.EventDate.Month == dtSelectedDate.Month &&
+                                        eventItem.EventDate.Day == currentDay
+                                        )
                                     {
                                         <div class="calendar-event-indicator">@eventItem.EventName</div>
                                     }
@@ -188,21 +194,11 @@
 
     private async Task<List<EventDTO>> GetEvents()
     {
-        // return await client.GetFromJsonAsync<EventDTO>("/events");    
-        return new List<EventDTO>()
-        {
-            new EventDTO()
-            {
-                 Description="Test Event 1",
-                 ID=1,
-                 EventName="Test Event 1",
-                 EventHost="Test Host 1",
-                 GuestCount=10,
-                 VenueName="Test Venue 1",
-                 EventDate=DateTime.Parse("2026-07-01"),
-                 IsKidFriendly = true,
-            }
-        };
+        // return await client.GetFromJsonAsync<EventDTO>("/events");
+        // long running code and tasks 
+        var events = await EventsDataService.GetEventsAsync();
+        return events;
+
     }
 }
 
