@@ -21,7 +21,7 @@
     }
 
     .calendar-header {
-        width: 150px;
+        width: 175px;
         height: 30px;
         margin-top: 20px;
     }
@@ -47,14 +47,16 @@
         } *@
 
         @{
-            DateTime dtCurrentMonth = new DateTime(2026, 6, 1) ;
+            DateTime dtSelectedDate = new DateTime(2026, 8, 1) ;
 
 
             // Get the number of days in the current month
             <!--I need the current month to be displayed on the page -->
-            string currentMonth = dtCurrentMonth.ToString("MMMM");
-            string currentYear = dtCurrentMonth.ToString("yyyy");
-            int daysInMonth = DateTime.DaysInMonth(dtCurrentMonth.Year, dtCurrentMonth.Month);
+            string currentMonth = dtSelectedDate.ToString("MMMM");
+            string currentYear = dtSelectedDate.ToString("yyyy");
+            int daysInMonth = DateTime.DaysInMonth(dtSelectedDate.Year, dtSelectedDate.Month);
+            // ceiling will always round up an integer upwards by one whole number integer. 
+            // This value is based on july 2026 4.42 -> 5 days a week 
             int weeksInMonth = (int)Math.Ceiling(daysInMonth / 7.0);
             int currentDay = 1;
 
@@ -62,14 +64,16 @@
         }
 
         <!--Display the month name -->
-        <!-- 
+        - 
         <div class="row">
             <h1 class="col-4">@currentMonth @currentYear</h1>
-            <form model="@Model" method="post">
+            <!--
+           <form model="@Model" method="post">
                 <input type="hidden" name="modelJson" value="@JsonConvert.SerializeObject(Model)" />
                 <button type="submit" formaction="@Url.Action("PrevMonth", "Events")" class="col-2 btn btn-secondary mx-3">prev</button>
                 <button type="submit" formaction="@Url.Action("NextMonth", "Events")" class="col-2 btn btn-primary mx-3">next</button>
             </form>
+            --> 
         </div>
         -->
         <!-- I need a row to show the days of the week -->
@@ -90,11 +94,22 @@
             // 01:25:59
             <!-- We need a start date for the calendar -->
             // this is the number of blocks that need to be disabled before the first day of the month.  -->
-            int startBlock = 7 - (int)dtCurrentMonth.DayOfWeek;
-            // this is the number of blocks that need to be disabled after the last day of the month.  -->
-            int endBlock = DateTime.DaysInMonth(dtCurrentMonth.Year, dtCurrentMonth.Month) - 1;
-            int blockCount = 0;
+            // starting from a 0 based index enum with sunday being 0
+            // 0 based index 
+            int startBlock = (int)dtSelectedDate.DayOfWeek;
 
+            // spot the error in the process
+            // back up and simply the process 
+
+            // enum daysInWeek = {"Monday", };
+
+            // this is the number of blocks that need to be disabled after the last day of the month.  -->
+            int endBlock = DateTime.DaysInMonth(dtSelectedDate.Year, dtSelectedDate.Month) - 1;
+            // block count is for every box in the calander. 
+            int blockCount = 0;
+            // what pieces of data am i working with and what rulesets do they have. example 0 based indexes
+            // what can i do to fix alignment issues? i can use additon and subtraction. 
+            // if the evaluation part of the method or code is off, than i need to look at the filters/operators on that evaluation method. <> <=
         }
         <!-- 5 rows needed for the 4 weeks and extra days -->
         @for (int y = 0; y <= weeksInMonth; y++)
@@ -104,7 +119,7 @@
                 @for (int x = 1; x < 8; x++)
                 {
 
-                    @if (blockCount <= startBlock)
+                    @if (blockCount < startBlock)
                     {
                         // this is the number of blocks that need to be disabled before the first day of the month.  -->
                         <div class="col-1 border border-dark calendar-box calendar-box-disabled"></div>
@@ -119,7 +134,7 @@
                     {
                         // this is a filter where we are looking at the events and seeing if there are any events that match the current day and month. If there are we want to display the event name in the calendar box.
                         //var eventsForDay = await GetEvents(); //Model.CurrentEvents(currentDay);
-                        // if the events for the day is not empty in its explanation and there is at least on event....
+                        // if the events for the day is not empty in its explanation and there is at least one event....
                         if (eventsForDay != null && eventsForDay.Count() > 0)
                         {
                             // show that event in the calendar box.
@@ -127,10 +142,15 @@
                                 <div>
                                     @currentDay
                                 </div>
-
-                                @foreach (var eventItem in eventsForDay) 
+                                          
+                                @foreach (var eventItem in eventsForDay)
                                 {
-                                    <div class="calendar-event-indicator">@eventItem.EventName</div>
+
+                                    if (eventItem.EventDate.Day == currentDay)
+                                    {
+                                        <div class="calendar-event-indicator">@eventItem.EventName</div>
+                                    }
+
                                 }
                             </div> <!-- Close the calendar box here -->
                         }
@@ -179,7 +199,7 @@
                  EventHost="Test Host 1",
                  GuestCount=10,
                  VenueName="Test Venue 1",
-                 EventDate=DateTime.Parse("2026-06-01"),
+                 EventDate=DateTime.Parse("2026-07-01"),
                  IsKidFriendly = true,
             }
         };
