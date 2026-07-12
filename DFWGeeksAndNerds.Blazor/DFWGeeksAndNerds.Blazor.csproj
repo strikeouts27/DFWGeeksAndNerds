@@ -25,7 +25,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\images\Activites\" />
-    <Folder Include="wwwroot\images\Home\" />
   </ItemGroup>
 
 </Project>
