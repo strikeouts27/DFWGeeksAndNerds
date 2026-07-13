@@ -1,18 +1,95 @@
 ﻿@page "/videogames"
-<h3>VideoGames</h3>
+<PageTitle>Video Games</PageTitle>
 
-<div class="container">
-    <div class="jumbotron">
-        <h1>Bootstrap Tutorial</h1>
-        <p>
-            Bootstrap is the most popular HTML, CSS, and JS framework for developing
-            responsive, mobile-first projects on the web.
-        </p>
-    </div>
-    <p>This is some text.</p>
-    <p>This is another text.</p>
+<div class="container mb-4">
+    <h1 class="display-4">Video Games</h1>
+    <p class="lead">Check out some of our favorite games to play together!</p>
+</div>
+
+<!-- Using Bootstrap row-cols-md-5 ensures exactly 5 cards per row on medium/large screens -->
+<div class="row row-cols-1 row-cols-md-5 g-4 mb-5">
+    @foreach (var game in Games)
+    {
+        <div class="col">
+            <div class="card h-100">
+                <!-- Using a placeholder image generator if image is empty/missing, else using specific image -->
+                <img src="@game.ImagePath" class="card-img-top p-2" alt="@game.Title" style="height: 15rem; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">@game.Title</h5>
+                    <p class="card-text">@game.Description</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 d-flex justify-content-center pb-3">
+                    <a href="#" class="btn btn-primary">Let's Play</a>
+                </div>
+            </div>
+        </div>
+    }
 </div>
 
 @code {
+    public class VideoGame
+    {
+        public string Title { get; set; }
+        public string ImagePath { get; set; }
+        public string Description { get; set; }
+    }
 
+    public List<VideoGame> Games { get; set; } = new List<VideoGame>();
+
+    protected override void OnInitialized()
+    {
+        // Add all included games with images
+        Games.Add(new VideoGame { Title = "Bioshock", ImagePath = "/images/VideoGames/bioshock.jpg", Description = "Explore the underwater dystopian city of Rapture." });
+        Games.Add(new VideoGame { Title = "Bioshock Infinite", ImagePath = "/images/VideoGames/bioshockinfinite.jpg", Description = "Take to the skies in the floating city of Columbia." });
+        Games.Add(new VideoGame { Title = "Bleach", ImagePath = "/images/VideoGames/bleach.jpg", Description = "Battle hollows and save the Soul Society." });
+        Games.Add(new VideoGame { Title = "Bloodborne", ImagePath = "/images/VideoGames/bloodborne.jpg", Description = "Face your nightmares in the cursed city of Yharnam." });
+        Games.Add(new VideoGame { Title = "Call of Duty", ImagePath = "/images/VideoGames/callofduty.jpg", Description = "Experience intense, fast-paced military combat." });
+        Games.Add(new VideoGame { Title = "Dispatch", ImagePath = "/images/VideoGames/dispatch.png", Description = "Coordinate and solve complex tactical situations." });
+        Games.Add(new VideoGame { Title = "Doom", ImagePath = "/images/VideoGames/doom.jpg", Description = "Rip and tear your way through unending demon hordes." });
+        Games.Add(new VideoGame { Title = "Duck Game", ImagePath = "/images/VideoGames/DuckGame.jpg", Description = "Frantic, fast-paced multiplayer combat where ducks battle it out with crazy weapons." });
+        Games.Add(new VideoGame { Title = "Elder Skyrim", ImagePath = "/images/VideoGames/elderskyrim.png", Description = "Embark on an epic fantasy adventure as the Dragonborn." });
+        Games.Add(new VideoGame { Title = "Fable", ImagePath = "/images/VideoGames/fable.jpg", Description = "Forge your own destiny in the charming world of Albion." });
+        Games.Add(new VideoGame { Title = "Fallout 3", ImagePath = "/images/VideoGames/fallout3.jpg", Description = "Survive the harsh post-apocalyptic Capital Wasteland." });
+        Games.Add(new VideoGame { Title = "Fire Emblem: Path of Radiance", ImagePath = "/images/VideoGames/fireemblempathofradiance.jpg", Description = "Lead your mercenaries to victory in tactical grid-based battles." });
+        Games.Add(new VideoGame { Title = "Gloomhaven", ImagePath = "/images/VideoGames/Gloomhaven.jpg", Description = "A tactical role-playing game where players take on the role of a wandering adventurer." });
+        Games.Add(new VideoGame { Title = "God of War", ImagePath = "/images/VideoGames/godOfWar.jpg", Description = "Embark on a brutal, mythological journey with Kratos." });
+        Games.Add(new VideoGame { Title = "Hades", ImagePath = "/images/VideoGames/hades.jpg", Description = "Defy the god of the dead in this rogue-like dungeon crawler." });
+        Games.Add(new VideoGame { Title = "Halo", ImagePath = "/images/VideoGames/halo.jpg", Description = "Become the Master Chief and finish the glorious fight." });
+        Games.Add(new VideoGame { Title = "Helldivers 2", ImagePath = "/images/VideoGames/Helldivers2.jpg", Description = "Join forces with friends to spread democracy across the galaxy in this intense co-op shooter." });
+        Games.Add(new VideoGame { Title = "Hollow Knight: Silksong", ImagePath = "/images/VideoGames/hollowknightsilksong.jpg", Description = "Explore a vast, haunted insectoid kingdom." });
+        Games.Add(new VideoGame { Title = "Infamous", ImagePath = "/images/VideoGames/infamous.jpg", Description = "Wield extraordinary superhuman powers in a massive open world." });
+        Games.Add(new VideoGame { Title = "Luigi's Mansion", ImagePath = "/images/VideoGames/luigismansion.jpg", Description = "Bust ghosts armed with your trusty Poltergust." });
+        Games.Add(new VideoGame { Title = "Mario Kart", ImagePath = "/images/VideoGames/MarioKart.jpg", Description = "Race against your friends and throw blue shells to claim first place on the track!" });
+        Games.Add(new VideoGame { Title = "Monster Hunter: World", ImagePath = "/images/VideoGames/monsterhunterworld.jpg", Description = "Hunt colossal monsters in a living, breathing ecosystem." });
+        Games.Add(new VideoGame { Title = "One Punch", ImagePath = "/images/VideoGames/onepunch.png", Description = "Experience the legendary, overwhelming power of a single strike." });
+        Games.Add(new VideoGame { Title = "Peak", ImagePath = "/images/VideoGames/peak.jpg", Description = "A mysterious, exciting new adventure at the absolute peak." });
+        Games.Add(new VideoGame { Title = "Persona 5 Royal", ImagePath = "/images/VideoGames/persona5royal.jpg", Description = "Steal hearts as a Phantom Thief in this stylish RPG." });
+        Games.Add(new VideoGame { Title = "Pokemon", ImagePath = "/images/VideoGames/pokemon.jpg", Description = "Catch 'em all and become the ultimate champion." });
+        Games.Add(new VideoGame { Title = "Resident Evil", ImagePath = "/images/VideoGames/residentevil.jpg", Description = "Survive truly terrifying horrors and unearth dark secrets." });
+        Games.Add(new VideoGame { Title = "Risk of Rain 2", ImagePath = "/images/VideoGames/Risk_of_Rain_2.jpg", Description = "Escape a chaotic alien planet by fighting through hordes of monsters in this roguelike." });
+        Games.Add(new VideoGame { Title = "Skyrim", ImagePath = "/images/VideoGames/skyrim.png", Description = "Explore an open-world masterpiece of snowy peaks and dragons." });
+        Games.Add(new VideoGame { Title = "Slay the Spire 2", ImagePath = "/images/VideoGames/SlaytheSpire2.png", Description = "Craft your deck, encounter bizarre creatures, and ascend the spire!" });
+        Games.Add(new VideoGame { Title = "Species Unknown", ImagePath = "/images/VideoGames/SpeciesUnknown.jpg", Description = "Discover and survive against mysterious lifeforms in completely uncharted territories." });
+        Games.Add(new VideoGame { Title = "Star Wars: Knights of the Old Republic", ImagePath = "/images/VideoGames/starwarsknightsoftheoldrepublic.jpg", Description = "Determine the fate of the entire galaxy with the Force." });
+        Games.Add(new VideoGame { Title = "Super Mario Galaxy", ImagePath = "/images/VideoGames/supermariogalaxy.jpg", Description = "Defy gravity traversing beautiful, bizarre planetary systems." });
+        Games.Add(new VideoGame { Title = "Super Smash Bros. Ultimate", ImagePath = "/images/VideoGames/SuperSmashBrothersUltimate.jpg", Description = "Iconic gaming characters clash in the ultimate fighting crossover game." });
+        Games.Add(new VideoGame { Title = "The Captain Is Dead", ImagePath = "/images/VideoGames/TheCaptainIsDead.jpg", Description = "A frantic co-op game where you must frantically fix your spaceship before the aliens destroy it!" });
+        Games.Add(new VideoGame { Title = "The Last of Us", ImagePath = "/images/VideoGames/thelastofus.jpg", Description = "Survive a perilous, emotionally gripping post-apocalyptic journey." });
+        Games.Add(new VideoGame { Title = "Titanfall 2", ImagePath = "/images/VideoGames/titanfall2.jpg", Description = "Team up with your massive mechanical titan in flawless combat." });
+        Games.Add(new VideoGame { Title = "Uncharted", ImagePath = "/images/VideoGames/uncharted.jpg", Description = "Embark on incredible cinematic treasure hunts across the globe." });
+        Games.Add(new VideoGame { Title = "Valorant", ImagePath = "/images/VideoGames/Valorant.jpg", Description = "A 5v5 character-based tactical shooter filled with precise gunplay and abilities." });
+        Games.Add(new VideoGame { Title = "Void Crew", ImagePath = "/images/VideoGames/VoidCrew.jpg", Description = "Team up with friends to pilot a massive spaceship in intense epic space battles." });
+        Games.Add(new VideoGame { Title = "Zelda", ImagePath = "/images/VideoGames/zelda.jpg", Description = "Explore the legendary, sprawling realm of Hyrule." });
+
+        // Add additional blank cards to equal exactly 50
+        for (int i = Games.Count + 1; i <= 50; i++)
+        {
+            Games.Add(new VideoGame
+            {
+                Title = $"Game Title {i}",
+                ImagePath = "...", // missing image placeholder
+                Description = "Some quick example text to build on the card title and make up the bulk of the card’s content."
+            });
+        }
+    }
 }
