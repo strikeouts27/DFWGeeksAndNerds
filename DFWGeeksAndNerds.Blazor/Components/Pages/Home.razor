@@ -152,10 +152,49 @@
 	</div>
 </div>
 
+<div class="container mt-4">
+	<h3>Join DFW Geeks and Nerds!</h3>
 
+	<!-- EditForm binds to our C# model -->
+	<EditForm Model="@newMember" OnValidSubmit="RegisterMember">
 
+		<!-- Standard Bootstrap 5 Form Layout -->
+		<div class="mb-3">
+			<label for="name" class="form-label">Your Name</label>
+			<!-- InputText is Blazor's version of <input type="text"> -->
+			<InputText id="name" class="form-control" @bind-Value="newMember.Name" />
+		</div>
 
+		<div class="mb-3">
+			<label for="email" class="form-label">Email Address</label>
+			<InputText id="email" type="email" class="form-control" @bind-Value="newMember.Email" />
+		</div>
 
+		<div class="mb-3">
+			<label for="interest" class="form-label">What events would you like to see in the club?</label>
+			<InputText id="interest" class="form-control" @bind-Value="newMember.FavoriteInterest" placeholder="e.g. Board Games, Anime..." />
+		</div>
 
+		<button type="submit" class="btn btn-primary">Sign Up!</button>
+	</EditForm>
+</div>
 
+@code {
+	// 1. Create an instance of the model to hold the form data
+	private ClubMember newMember = new ClubMember();
 
+	// 2. Define what happens when the form is submitted
+	private void RegisterMember()
+	{
+		// This is where you would normally save 'newMember' to a database!
+		Console.WriteLine($"New member {newMember.Name} registered!");
+	}
+
+	// 3. Create a C# Class (Model) to represent the form data
+	public class ClubMember
+	{
+		public string Name { get; set; } = "";
+		public string Email { get; set; } = "";
+		public string FavoriteInterest { get; set; } = "";
+	}
+}
