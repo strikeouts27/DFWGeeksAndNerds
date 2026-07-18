@@ -22,4 +22,13 @@ namespace DFWGeeksAndNerds.Shared.DTOs
         public bool IsKidFriendly { get; set; }
         public string Description { get; set; }
     }
+    // we made a duplicate of the EventNameDTO class. 
+    // TODO : we need to remove the duplicate class from the api project.
+    public class EventNameDTO
+    {
+        public int Id { get; set; }
+        public DateTime EventDate { get; set; }
+        public string EventName { get; set; }
+    }
+
 }

@@ -49,7 +49,7 @@
         } *@
 
         @{
-            DateTime dtSelectedDate = new DateTime(2026, 8, 1) ;
+            DateTime dtSelectedDate = new DateTime(2026, 5, 1) ;
 
 
             // Get the number of days in the current month
@@ -179,7 +179,7 @@
 
 @code{
     HttpClient client;
-    List<EventDTO> eventsForDay = new List<EventDTO>();
+    List<EventNameDTO> eventsForDay = new List<EventNameDTO>();
 
     // utlize this code once for inital launching of the webpage and reloads. button click actions, will not trigger this code to run. 
     protected override async Task OnInitializedAsync()
@@ -192,11 +192,11 @@
         await base.OnInitializedAsync();
     }
 
-    private async Task<List<EventDTO>> GetEvents()
+    private async Task<List<EventNameDTO>> GetEvents()
     {
         // return await client.GetFromJsonAsync<EventDTO>("/events");
         // long running code and tasks 
-        var events = await EventsDataService.GetEventsAsync();
+        var events = await EventsDataService.GetEventsNamesAsync();
         return events;
 
     }

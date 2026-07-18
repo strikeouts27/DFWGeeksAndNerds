@@ -1,9 +1,10 @@
 ﻿using DFWGeeksAndNerds.Api.Models;
 using Microsoft.EntityFrameworkCore;
 
+
 // Provider folder is used for the database and api functionality to work. 
 
- 
+
 namespace DFWGeeksAndNerds.Api.Providers
 {
     public class NerdsandGeeksDbContext : DbContext

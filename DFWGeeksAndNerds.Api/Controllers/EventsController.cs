@@ -7,6 +7,7 @@ using DFWGeeksAndNerds.Api.Providers;
 using System.Runtime.CompilerServices;
 using Microsoft.EntityFrameworkCore;
 
+
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 // DATABASE NEEDS TO BE TURNED ON IN ORDER TO RUN ANY OF THESE METHODS. 
@@ -100,6 +101,15 @@ namespace DFWGeeksAndNerds.Api.Controllers
         {
             // the api controller grabbing the data from the database to be sent back via json 
             return _dbContext.Events.ToList();
+        }
+
+        [HttpGet("names")]
+        public IEnumerable<EventNameDTO> GetNames()
+        {
+            // the api controller grabbing the data from the database to be sent back via json 
+            return _dbContext.Events
+                             .Select(p => new EventNameDTO { Id = p.Id, EventName = p.EventName, EventDate = p.EventDate })
+                             .ToList();
         }
 
         // POST api/<EventsController>

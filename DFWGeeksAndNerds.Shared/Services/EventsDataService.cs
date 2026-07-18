@@ -54,6 +54,26 @@ public class EventsDataService
         return Newtonsoft.Json.JsonConvert.DeserializeObject<List<EventDTO>>(content);
     }
 
+    public async Task<List<EventNameDTO>> GetEventsNamesAsync()
+    {
+        // the string naming convention for Getasync method will need to match the route naming convention for the corresponding method in the events controller. 
+        var response = await _client.GetAsync("events/names");
+        // this will ensure that the response is successful, if not it will throw an error. FAIL FAST 
+        response.EnsureSuccessStatusCode();
+        // this will take the response content and make it into a string. then it will deserialize the string into a list of EventDTO objects.
+        // ASP.NET specifies that json will be the format that is transmitted.  
+        // upon success the event information is translated into a string which is than stored in a format fitting for the next method to package it into a DTO. 
+
+        var content = await response.Content.ReadAsStringAsync();
+        // desearlize think convert from string to object. it will assign all of the proprties of json into the corresponding fields by name.
+        // this will return a list of events. 
+
+        // .JsonSerializer is microsofts json convertor built by microsoft. joseph did NOT reccomend using it. .JsonSerializer 
+        //return System.Text.Json.JsonSerializer.Deserialize<List<EventDTO>>(content);
+        // deserialize and pack to DTO
+        return Newtonsoft.Json.JsonConvert.DeserializeObject<List<EventNameDTO>>(content);
+    }
+
     // The controller called services with this converted dto. and the dto is passed in as a parameter. 
     public async Task CreateEventAsync(EventDTO newEventDTO)
     {

@@ -23,5 +23,10 @@
         public required bool IsKidFriendly { get; set; }
         public string? Description { get; set; }
     }
-
+    public class EventNameDTO
+    {
+        public int Id { get; set; }
+        public string EventName { get; set; }
+        public DateTime EventDate { get; set; }
+    }
 }
