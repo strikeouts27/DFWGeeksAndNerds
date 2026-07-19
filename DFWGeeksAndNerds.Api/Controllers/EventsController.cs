@@ -111,6 +111,19 @@ namespace DFWGeeksAndNerds.Api.Controllers
                              .Select(p => new EventNameDTO { Id = p.Id, EventName = p.EventName, EventDate = p.EventDate })
                              .ToList();
         }
+        // With great effort joseph explained that the event typ0e that is being returned by the method is NOT tied to the return keyword but to
+        // the data type that the controller method is using. this data type will also be required to be used by the data service method. 
+        // yes the data types must match. This method, the data service method data type and the return statement must use the same data type. 
+        [HttpGet("{id}")]
+        public EventDTO? GetEventById(int id)
+        {
+            // the api controller grabbing the data from the database to be sent back via json 
+            
+            return _dbContext.Events
+                             .Where(p => p.Id.Equals(id))
+                             .FirstOrDefault();        
+        }
+
 
         // POST api/<EventsController>
         // event is a special keyword for dotnet. @ says this is not a dotnet keyword. 

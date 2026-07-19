@@ -154,7 +154,10 @@
                                         eventItem.EventDate.Day == currentDay
                                         )
                                     {
-                                        <div class="calendar-event-indicator">@eventItem.EventName</div>
+                                        <div class="calendar-event-indicator">
+                                            <a href="/eventdetails/@eventItem.Id">@eventItem.EventName</a>
+                                        </div>
+                                       
                                     }
 
                                 }

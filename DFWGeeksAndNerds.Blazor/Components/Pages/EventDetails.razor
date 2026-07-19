@@ -1,0 +1,54 @@
+﻿@using DFWGeeksAndNerds.Shared.DTOs
+@using DFWGeeksAndNerds.Web.ViewModels;
+@using DFWGeeksAndNerds.Shared.Services;
+
+@page "/eventdetails/{id}"
+@inject EventsDataService EventsDataService;
+
+<h3>EventDetails @id</h3>
+@if(_eventDetails != null)
+{
+    <div>@_eventDetails.EventName</div>
+    <div>@_eventDetails.EventDate</div>
+    <div>@_eventDetails.Description</div>
+}
+else
+{
+    <div>no details</div>    
+}
+
+@code {
+    [Parameter] public string id { get; set; }
+
+    EventDTO? _eventDetails;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+    }
+
+    // this method is considered a page level event. 
+    // state changes will cause the bool to change from true to false and false to true. 
+    // this method will trigger on the inital page load and will turn from false to true. 
+    // these types of task methods are great for using bool logic for the page. 
+
+    // service will have the id passed to it and speak with api. 
+    // once the api is done talking to service the service will place the event with the corresponding id in the corresponding variable. 
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            if(int.TryParse(id, out int _id))
+            {
+                _eventDetails = await EventsDataService.GetEventById(_id);
+            }
+            else
+            {
+                // notify the user interface that id is not a valid value. 
+                Console.WriteLine("Invalid value for event id.");
+            }
+
+        }
+        await base.OnAfterRenderAsync(firstRender);
+    }
+}
